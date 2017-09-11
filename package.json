@@ -55,6 +55,7 @@
     "redux-saga": "^0.15.6",
     "reselect": "^3.0.1",
     "xdate": "^0.8.2",
-    "zc-core": "file:src/modules/zconnect-js"
+    "zc-core": "file:src/modules/zconnect-js",
+    "zc-web": "file:src/modules/zconnect-web"
   }
 }
