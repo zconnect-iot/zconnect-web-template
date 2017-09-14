@@ -1,5 +1,1 @@
-import Buildings from './Buildings/index'
-
-export {
-  Buildings,
-}
+export { default as Buildings } from './Buildings/index'
