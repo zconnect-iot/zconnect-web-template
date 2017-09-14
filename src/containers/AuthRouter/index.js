@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { selectUserLoggedIn } from 'zc-core/auth/selectors'
-import { Register, Forgotten, Login } from 'zc-web/src/containers/auth'
+import { Register, Forgotten, Login } from 'zc-web/containers/auth'
 
 
 function AuthRouter({ authenticated }) {
