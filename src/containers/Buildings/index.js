@@ -6,7 +6,6 @@ import { Tooltip } from 'zc-web/widgets'
 
 import { Buildings as Demo } from '../demo'
 
-
 export default function Buildings() {
   return (
     <Content
@@ -16,13 +15,13 @@ export default function Buildings() {
         { title: 'Print report', icon: 'PRINT', action: () => {} },
       ]}
     >
-      <p>
+      <div>
         This is a tooltip -&gt;
         <Tooltip>
           This is the tooltip message, with an Icon..
           <Icon name="SHOPPING_CART" />
         </Tooltip>
-      </p>
+      </div>
       <Demo />
     </Content>
   )
