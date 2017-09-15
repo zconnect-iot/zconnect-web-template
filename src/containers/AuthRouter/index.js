@@ -9,7 +9,7 @@ import { Register, Forgotten, Login } from 'zc-web/containers/auth'
 
 function AuthRouter({ authenticated }) {
   if (authenticated) return (
-    <Redirect to="/" />
+    <Redirect to="/buildings" />
   )
   return (
     <div>
