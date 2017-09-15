@@ -29,7 +29,8 @@ const config = {
   },
   resolve: {
     alias: {
-      theme: path.resolve(__dirname, 'src/style/base'),
+      // Override to provide an app-specific theme.
+      theme: path.resolve(__dirname, 'src/modules/zconnect-web/theme'),
       assets: path.resolve(__dirname, 'src/assets')
     },
   },
