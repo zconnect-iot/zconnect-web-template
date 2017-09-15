@@ -7,6 +7,7 @@ import {
   EmailField,
   PasswordField,
   CheckboxField,
+  SelectField,
 } from 'zc-web/widgets/forms/index'
 
 import styles from './style.scss'
@@ -25,6 +26,10 @@ const personalDetails = ({handleSubmit}) => <form
     />
     <PasswordField name='password' label='Password' placeholder='******' />
     <CheckboxField name='keepUpdated' label='Keep me up-to-date' />
+    <SelectField name='userType' label='User type'>
+      <option value='onsite'>On-site</option>
+      <option value='offsite'>Off-site</option>
+    </SelectField>
   </div>
 </form>
 
