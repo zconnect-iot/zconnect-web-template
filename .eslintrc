@@ -1,12 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-
-  "ecmaFeatures": {
-    "globalReturn": true,
-    "jsx": true,
-    "modules": true
-  },
+  "extends": "zoetrope",
 
   "env": {
     "browser": true,
@@ -20,19 +14,5 @@
     "it": true,
     "expect": true,
     "sinon": true
-  },
-
-  "rules": {
-    "semi": ["error", "never"],
-    "brace-style": ["warn", "stroustrup"],
-    "react/jsx-first-prop-new-line": ["warn", "multiline"],
-    "react/jsx-filename-extension": 0,
-    "no-underscore-dangle": 0,
-    "camelcase": 0,
-    "curly": ["warn", "multi"],
-    "react/jsx-no-bind": [ 1,
-      "allowArrowFunctions": false
-    ],
-    "no-console": 0
   }
 }
