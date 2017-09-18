@@ -6,53 +6,22 @@ import StatCard, { DELTA_UP, DELTA_DOWN } from 'zc-web/widgets/StatCard/index'
 /**
  * The Buildings view.
  */
-const Buildings = (props) => {
-  return (<div>
-    <View row>
-      <View column auto>
-        <StatCard
-          item={{
-            figure: 162,
-            desc: 'Alarms this month',
-          }}
-        />
-      </View>
-
-      <View column auto>
-        <StatCard
-          item={{
-            figure: 401,
-            desc: 'Avg. last 6 months',
-            deltaType: DELTA_UP,
-            deltaContent: '25%',
-          }}
-        />
-      </View>
-
-      <View column auto>
-        <StatCard
-          item={{
-            figure: 240,
-            desc: 'Avg. last 12 months',
-            deltaType: DELTA_DOWN,
-            deltaContent: '25%',
-          }}
-        />
-      </View>
-
-      <View column auto>
-        <StatCard
-          item={{
-            key: 0,
-            figure: 1024,
-            desc: 'Annual Avg.',
-            deltaType: DELTA_UP,
-            deltaContent: '50%',
-          }}
-        />
-      </View>
+export default (props) => (<div>
+  <View row>
+    <View column auto>
+      <StatCard figure={162} description='Alarms this month' delta={10} reverseColor />
     </View>
-  </div>)
-}
 
-export { Buildings as default }
+    <View column auto>
+      <StatCard figure={401} description='Avg. last 6 months' delta={5} deltaUnits='%' reverseColor />
+    </View>
+
+    <View column auto>
+      <StatCard figure={240} description='Avg. last 12 months' delta={-20} deltaUnits='%' reverseColor />
+    </View>
+
+    <View column auto>
+      <StatCard figure={1024} description='Annual avg.' delta={-50} deltaUnits='%' reverseColor />
+    </View>
+  </View>
+</div>)
