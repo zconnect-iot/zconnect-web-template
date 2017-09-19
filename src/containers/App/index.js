@@ -22,10 +22,10 @@ function App({ navigate, location }) {
         { title: 'Account', icon: 'PERSON', route: '/account' },
       ]}
     >
-      <Redirect from="/" exact to="/buildings" />
       <Switch>
         <Route path="/buildings" component={Buildings} />
         <Route path="/account" component={Account} />
+        <Redirect from="/" exact to="/buildings" />
       </Switch>
     </Page>
   )
