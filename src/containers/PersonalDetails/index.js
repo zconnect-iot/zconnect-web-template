@@ -9,6 +9,7 @@ import {
   PasswordField,
   CheckboxField,
   SelectField,
+  DateField,
 } from 'zc-web/widgets/forms/index'
 
 const personalDetails = props => (
@@ -28,6 +29,7 @@ const personalDetails = props => (
       <option value="onsite">On-site</option>
       <option value="offsite">Off-site</option>
     </SelectField>
+    <DateField name="date" label="Date" />
   </form>
 )
 
