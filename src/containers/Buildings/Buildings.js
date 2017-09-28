@@ -48,7 +48,7 @@ export default function BuildingsContent(props) {
           <Tabs>
             <TabLinkList>
               <TabLink to="atRisk"><span>At risk</span></TabLink>
-              <TabLink to="needsData"><span>Needs data</span></TabLink>
+              <TabLink to="all"><span>All buildings</span></TabLink>
             </TabLinkList>
 
             <TabContent for="atRisk">
