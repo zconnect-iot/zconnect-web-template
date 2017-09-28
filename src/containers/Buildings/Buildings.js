@@ -1,12 +1,16 @@
 import React from 'react'
 import { Row, Col } from 'react-flexbox-grid'
 
-import { TabLink, TabLinkList, Tabs, TabContent } from 'zc-web/views'
+import { TabLink, TabLinkList, TabContent, Tabs } from 'zc-web/views'
 import { Content, Icon } from 'zc-web/components'
 import { Tooltip, StatCard } from 'zc-web/widgets'
 
+import { default as AtRiskBuildings } from './AtRiskBuildings'
+import { default as AllBuildings } from './AllBuildings'
 
-export default function BuildingsContent() {
+export default function BuildingsContent(props) {
+  const match = props.match
+  console.log('BuildingsContent props', props)
   return (
     <Content
       title="Buildings"
@@ -49,13 +53,11 @@ export default function BuildingsContent() {
             </TabLinkList>
 
             <TabContent for="atRisk">
-              <h2>At risk content</h2>
-              <p>These buildings are at risk.</p>
+              <AtRiskBuildings />
             </TabContent>
 
-            <TabContent for="needsData">
-              <h2>Needs data collection content</h2>
-              <p>These buildings need data collection.</p>
+            <TabContent for="all">
+              <AllBuildings />
             </TabContent>
           </Tabs>
         </Col>
