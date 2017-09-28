@@ -1,0 +1,42 @@
+@import '~theme/variables.scss';
+
+
+:global(.Building) {
+  border: 1px solid red;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+:global(.Building__main) {
+  padding: 12px;
+}
+
+:global(.Building__thumbnail) {
+  text-align: center;
+}
+
+:global(.Building__footer) {
+  background-color: $bg-dark;
+  width: 100%;
+  display: block;
+  border-top: 1px solid $border-faint;
+  font-weight: bold;
+}
+
+:global(.Building__notice) {
+  display: inline-block;
+  width: 50%;
+  padding: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+:global(.Building__description) {
+  font-size: 10px;
+}
+
+:global(.Building__figure--danger) {
+  color: $brand-danger;
+}
