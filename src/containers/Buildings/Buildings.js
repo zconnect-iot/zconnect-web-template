@@ -5,11 +5,10 @@ import { TabLink, TabLinkList, TabContent, Tabs } from 'zc-web/views'
 import { Content, Icon } from 'zc-web/components'
 import { Tooltip, StatCard } from 'zc-web/widgets'
 
-import { default as AtRiskBuildings } from './AtRiskBuildings'
-import { default as AllBuildings } from './AllBuildings'
+import AtRiskBuildings from './AtRiskBuildings'
+import AllBuildings from './AllBuildings'
 
 export default function BuildingsContent(props) {
-  const match = props.match
   return (
     <Content
       title="Buildings"
