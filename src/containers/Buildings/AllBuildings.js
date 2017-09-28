@@ -6,7 +6,6 @@ import { List } from 'zc-web/views'
 
 const randInt = (gte, lt) => (Math.random() * (lt - gte) + gte) | 0
 const randElem = (arr) => arr[randInt(0, arr.length)]
-const thumbnails = [0, 1, 2].map(i => `../../assets/images/building${i}.png`)
 const data = [
   'Big Building',
   'Medium Building',
@@ -24,7 +23,6 @@ const data = [
     name,
     outlets,
     atRisk: randInt(1, outlets),
-    thumbnail: randElem(thumbnails),
   }
 })
 
