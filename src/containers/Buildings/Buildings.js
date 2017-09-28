@@ -10,7 +10,6 @@ import { default as AllBuildings } from './AllBuildings'
 
 export default function BuildingsContent(props) {
   const match = props.match
-  console.log('BuildingsContent props', props)
   return (
     <Content
       title="Buildings"
@@ -45,7 +44,7 @@ export default function BuildingsContent(props) {
       </Row>
 
       <Row>
-        <Col xs style={{backgroundColor: '#f0f3f4'}}>
+        <Col xs style={{ backgroundColor: '#f0f3f4' }}>
           <Tabs>
             <TabLinkList>
               <TabLink to="atRisk"><span>At risk</span></TabLink>

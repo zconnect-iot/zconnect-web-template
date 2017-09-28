@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { TabContent } from 'zc-web/views'
-
 export default function AllBuildings() {
   return (
     <div>
