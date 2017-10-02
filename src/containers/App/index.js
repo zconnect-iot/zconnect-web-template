@@ -15,6 +15,7 @@ function App({ navigate, location }) {
   return (
     <Page
       activeRoute={location.pathname}
+      location={location}
       navigate={navigate}
       navItems={[
         { title: 'Buildings', icon: 'BUILDING', route: '/buildings' },
