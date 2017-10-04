@@ -1,11 +1,14 @@
 import React from 'react'
 import { Row, Col } from 'react-flexbox-grid'
 
+import { TabLink, TabLinkList, TabContent, Tabs } from 'zc-web/views'
 import { Content, Icon } from 'zc-web/components'
 import { Tooltip, StatCard } from 'zc-web/widgets'
 
+import AtRiskBuildings from './AtRiskBuildings'
+import AllBuildings from './AllBuildings'
 
-export default function BuildingsContent() {
+export default function BuildingsContent(props) {
   return (
     <Content
       title="Buildings"
@@ -36,6 +39,25 @@ export default function BuildingsContent() {
 
         <Col xs>
           <StatCard figure={1024} description="Annual avg." delta={-50} deltaUnits="%" reverseColor />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col xs style={{ backgroundColor: '#f0f3f4' }}>
+          <Tabs>
+            <TabLinkList>
+              <TabLink to="atRisk"><span>At risk</span></TabLink>
+              <TabLink to="all"><span>All buildings</span></TabLink>
+            </TabLinkList>
+
+            <TabContent for="atRisk">
+              <AtRiskBuildings />
+            </TabContent>
+
+            <TabContent for="all">
+              <AllBuildings />
+            </TabContent>
+          </Tabs>
         </Col>
       </Row>
     </Content>
