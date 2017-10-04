@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BEMHelper from 'react-bem-helper'
 
-import { Icon } from 'zc-web/components'
-import { default as Card, classes } from 'zc-web/views/Card'
+import { Card } from 'zc-web/views'
 import { StatCard } from 'zc-web/widgets'
 
 import style from './style.scss'
@@ -20,6 +18,14 @@ const ExampleContents = props => (
     <StatCard inline invert figure={props.atRisk} description="At risk" dangerFigure={props.atRisk > 0} />
   </div>
 )
+ExampleContents.propTypes = {
+  dark: PropTypes.bool,
+  outlets: PropTypes.number.isRequired,
+  atRisk: PropTypes.number.isRequired,
+}
+ExampleContents.defaultProps = {
+  dark: false,
+}
 
 /** Minimal Card usage example. */
 export const MinimalBuilding = props => (
@@ -29,6 +35,12 @@ export const MinimalBuilding = props => (
     </Card>
   </div>
 )
+MinimalBuilding.propTypes = {
+  name: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+  outlets: PropTypes.number.isRequired,
+  atRisk: PropTypes.number.isRequired,
+}
 
 /** Simple Card example with an image and a title. */
 export const NormalBuilding = props => (
@@ -41,6 +53,12 @@ export const NormalBuilding = props => (
     </Card>
   </div>
 )
+NormalBuilding.propTypes = {
+  name: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+  outlets: PropTypes.number.isRequired,
+  atRisk: PropTypes.number.isRequired,
+}
 
 /** Full Card example. */
 export const FullBuilding = props => (
@@ -55,8 +73,7 @@ export const FullBuilding = props => (
     </Card>
   </div>
 )
-
-MinimalBuilding.propTypes = NormalBuilding.propTypes = FullBuilding.propTypes = {
+FullBuilding.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   outlets: PropTypes.number.isRequired,
