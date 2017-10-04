@@ -6,7 +6,7 @@ const path = require('path');
 const isProd = process.env.NODE_ENV === 'production'
 
 const config = {
-  entry: ['regenerator-runtime/runtime', './src/index.js'],
+  entry: ['regenerator-runtime/runtime', 'isomorphic-fetch', './src/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, "dist"),
@@ -16,7 +16,11 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        include: [
+          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "node_modules/zc-core"),
+          path.resolve(__dirname, "node_modules/zc-web")
+        ],
         loader: 'babel-loader'
       },
       {
