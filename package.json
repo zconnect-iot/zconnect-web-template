@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "griddle-react": "^1.9.0",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "prop-types": "^15.5.10",
