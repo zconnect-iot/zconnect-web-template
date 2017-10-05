@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Row, Col } from 'react-flexbox-grid'
 
 import { TabLink, TabLinkList, TabContent, Tabs } from 'zc-web/views'
@@ -8,7 +9,7 @@ import { Tooltip, StatCard } from 'zc-web/widgets'
 import AtRiskBuildings from './AtRiskBuildings'
 import AllBuildings from './AllBuildings'
 
-export default function BuildingsContent(props) {
+export default function BuildingsContent(props, context) {
   return (
     <Content
       title="Buildings"
@@ -17,7 +18,7 @@ export default function BuildingsContent(props) {
         { title: 'Print report', icon: 'PRINT', action: () => {} },
       ]}
     >
-      <div>
+      <div style={{ marginBottom: '20px' }}>
         This is a tooltip -&gt;
         <Tooltip>
           This is the tooltip message, with an Icon..
@@ -25,36 +26,39 @@ export default function BuildingsContent(props) {
         </Tooltip>
       </div>
       <Row>
-        <Col xs>
+        <Col xs={6} sm style={{ marginBottom: '16px' }}>
           <StatCard figure={162} description="Alarms this month" delta={10} reverseColor />
         </Col>
 
-        <Col xs>
+        <Col xs={6} sm style={{ marginBottom: '16px' }}>
           <StatCard figure={401} description="Avg. last 6 months" delta={5} deltaUnits="%" reverseColor />
         </Col>
 
-        <Col xs>
+        <Col xs={6} sm style={{ marginBottom: '16px' }}>
           <StatCard figure={240} description="Avg. last 12 months" delta={-20} deltaUnits="%" reverseColor />
         </Col>
 
-        <Col xs>
+        <Col xs={6} sm style={{ marginBottom: '16px' }}>
           <StatCard figure={1024} description="Annual avg." delta={-50} deltaUnits="%" reverseColor />
         </Col>
       </Row>
 
       <Row>
-        <Col xs style={{ backgroundColor: '#f0f3f4' }}>
-          <Tabs>
+        <Col xs>
+          <Tabs
+            handleSelect={context.navigate}
+            selectedTab={`${context.location.pathname}${context.location.hash}`}
+          >
             <TabLinkList>
-              <TabLink to="atRisk"><span>At risk</span></TabLink>
-              <TabLink to="all"><span>All buildings</span></TabLink>
+              <TabLink to="/buildings">At risk</TabLink>
+              <TabLink to="/buildings#all">All buildings</TabLink>
             </TabLinkList>
 
-            <TabContent for="atRisk">
+            <TabContent for="/buildings">
               <AtRiskBuildings />
             </TabContent>
 
-            <TabContent for="all">
+            <TabContent for="/buildings#all">
               <AllBuildings />
             </TabContent>
           </Tabs>
@@ -62,4 +66,12 @@ export default function BuildingsContent(props) {
       </Row>
     </Content>
   )
+}
+
+BuildingsContent.contextTypes = {
+  navigate: PropTypes.func,
+  location: PropTypes.shape({
+    hash: PropTypes.string.isRequired,
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
