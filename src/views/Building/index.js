@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import { Card } from 'zc-web/views'
 import { StatCard } from 'zc-web/widgets'
@@ -29,7 +30,7 @@ ExampleContents.defaultProps = {
 
 /** Minimal Card usage example. */
 export const MinimalBuilding = props => (
-  <Card className={style.Building}>
+  <Card className={classNames(props.className, style.Building)}>
     <ExampleContents {...props} />
   </Card>
 )
@@ -47,7 +48,7 @@ MinimalBuilding.defaultProps = {
 /** Simple Card example with an image and a title. */
 export const NormalBuilding = props => (
   <Card
-    className={style.Building}
+    className={classNames(props.className, style.Building)}
     image={{ src: props.thumbnail, alt: props.name }}
     subtitle="Building name"
   >
@@ -72,7 +73,7 @@ export const FullBuilding = props => (
     icon="WARNING"
     subtitle="Building name"
     image={{ src: props.thumbnail, alt: props.name }}
-    className={props.className}
+    className={classNames(props.className, style.Building)}
   >
     <ExampleContents {...props} dark />
   </Card>

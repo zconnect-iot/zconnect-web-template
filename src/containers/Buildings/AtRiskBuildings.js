@@ -1,7 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
-
-import { TabContent } from 'zc-web/views'
+import { Row, Col } from 'react-flexbox-grid'
 
 import { MinimalBuilding, FullBuilding, NormalBuilding } from '../../views'
 
@@ -11,19 +9,22 @@ const thumbnails = [
   '../../assets/images/building2.png',
 ]
 const atRiskBuildings = [
-  { outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
-  { outlets: 24, atRisk: 16, thumbnail: thumbnails[1] },
-  { outlets: 24, atRisk: 4, thumbnail: thumbnails[2] },
-  { outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
+  { id: 0, outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
+  { id: 1, outlets: 24, atRisk: 16, thumbnail: thumbnails[1] },
+  { id: 2, outlets: 24, atRisk: 4, thumbnail: thumbnails[2] },
+  { id: 3, outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
+  { id: 4, outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
+  { id: 5, outlets: 24, atRisk: 16, thumbnail: thumbnails[1] },
+  { id: 6, outlets: 24, atRisk: 4, thumbnail: thumbnails[2] },
+  { id: 7, outlets: 34, atRisk: 5, thumbnail: thumbnails[0] },
 ]
-atRiskBuildings.push(...atRiskBuildings)
 
 export default function AtRiskBuildings() {
   return (
     <div>
-      <Row style={{ paddingBottom: 10 }}>
-        {atRiskBuildings.map((building, key) => (
-          <Col xs={3} key={key}>
+      <Row>
+        {atRiskBuildings.map(building => (
+          <Col xs={3} key={building.id}>
             <MinimalBuilding
               name="Building name"
               thumbnail={building.thumbnail}
@@ -34,9 +35,9 @@ export default function AtRiskBuildings() {
         ))}
       </Row>
 
-      <Row style={{ paddingBottom: 10 }}>
-        {atRiskBuildings.map((building, key) => (
-          <Col xs={3} key={key}>
+      <Row>
+        {atRiskBuildings.map(building => (
+          <Col xs={3} key={building.id}>
             <NormalBuilding
               name="Building name"
               thumbnail={building.thumbnail}
@@ -47,9 +48,9 @@ export default function AtRiskBuildings() {
         ))}
       </Row>
 
-      <Row style={{ paddingBottom: 10 }}>
-        {atRiskBuildings.map((building, key) => (
-          <Col xs={3} key={key}>
+      <Row>
+        {atRiskBuildings.map(building => (
+          <Col xs={3} key={building.id}>
             <FullBuilding
               name="Building name"
               thumbnail={building.thumbnail}

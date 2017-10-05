@@ -4,14 +4,11 @@
 .Building {
   border: 1px solid red;
   border-radius: 8px;
-  overflow: hidden;
   margin-top: 5px;
   margin-bottom: 5px;
-  text-align: center;
 
   :global(.StatCard__description) {
     text-transform: uppercase;
-    font-size: $font-size-small;
   }
 }
 
