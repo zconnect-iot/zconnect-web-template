@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Card } from 'zc-web/views'
 import { Content } from 'zc-web/components'
 
 import PersonalDetails from '../PersonalDetails'
@@ -8,11 +9,13 @@ import PersonalDetails from '../PersonalDetails'
 export default function Account() {
   return (
     <Content
-      title='Account'
+      title="Account"
       actionItems={[
       ]}
     >
-      <PersonalDetails />
+      <Card panel title="Personal details">
+        <PersonalDetails />
+      </Card>
     </Content>
   )
 }
