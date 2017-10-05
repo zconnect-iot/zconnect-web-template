@@ -29,53 +29,61 @@ ExampleContents.defaultProps = {
 
 /** Minimal Card usage example. */
 export const MinimalBuilding = props => (
-  <div className={style.Building}>
-    <Card>
-      <ExampleContents {...props} />
-    </Card>
-  </div>
+  <Card className={style.Building}>
+    <ExampleContents {...props} />
+  </Card>
 )
 MinimalBuilding.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   outlets: PropTypes.number.isRequired,
   atRisk: PropTypes.number.isRequired,
+  className: PropTypes.string,
+}
+MinimalBuilding.defaultProps = {
+  className: '',
 }
 
 /** Simple Card example with an image and a title. */
 export const NormalBuilding = props => (
-  <div className={style.Building}>
-    <Card
-      image={{ src: props.thumbnail, alt: props.name }}
-      subtitle="Building name"
-    >
-      <ExampleContents {...props} dark />
-    </Card>
-  </div>
+  <Card
+    className={style.Building}
+    image={{ src: props.thumbnail, alt: props.name }}
+    subtitle="Building name"
+  >
+    <ExampleContents {...props} dark />
+  </Card>
 )
 NormalBuilding.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   outlets: PropTypes.number.isRequired,
   atRisk: PropTypes.number.isRequired,
+  className: PropTypes.string,
+}
+NormalBuilding.defaultProps = {
+  className: '',
 }
 
 /** Full Card example. */
 export const FullBuilding = props => (
-  <div className={style.Building}>
-    <Card
-      title="Building title"
-      icon="WARNING"
-      subtitle="Building name"
-      image={{ src: props.thumbnail, alt: props.name }}
-    >
-      <ExampleContents {...props} dark />
-    </Card>
-  </div>
+  <Card
+    title="Building title"
+    icon="WARNING"
+    subtitle="Building name"
+    image={{ src: props.thumbnail, alt: props.name }}
+    className={props.className}
+  >
+    <ExampleContents {...props} dark />
+  </Card>
 )
 FullBuilding.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   outlets: PropTypes.number.isRequired,
   atRisk: PropTypes.number.isRequired,
+  className: PropTypes.string,
+}
+FullBuilding.defaultProps = {
+  className: '',
 }
