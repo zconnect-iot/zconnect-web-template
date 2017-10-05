@@ -2,7 +2,7 @@ import React from 'react'
 import { ColumnDefinition } from 'griddle-react'
 
 import { GriddleViewLink } from 'zc-web/widgets'
-import { List } from 'zc-web/views'
+import List, { BasicLayout } from 'zc-web/views/List'
 
 const fakeData = [
   [30, 30, 96],
@@ -38,4 +38,14 @@ const columns = [
   />),
 ]
 
-export default () => <List data={fakeData} columns={columns} />
+const components = {
+  Layout: BasicLayout,
+}
+
+export default () => (
+  <List
+    data={fakeData}
+    columns={columns}
+    components={components}
+  />
+)

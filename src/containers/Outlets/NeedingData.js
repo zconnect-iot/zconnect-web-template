@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ColumnDefinition } from 'griddle-react'
 
 import { GriddleViewLink } from 'zc-web/widgets'
-import { List } from 'zc-web/views'
+import List, { BasicLayout } from 'zc-web/views/List'
 
 const fakeData = [20, 40, 60, 80, 100, 100, 100, 100].map((batt, i) => ({
   location: `Outlet ${i + 1}`,
@@ -42,4 +42,14 @@ const columns = [
   />),
 ]
 
-export default () => <List data={fakeData} columns={columns} />
+const components = {
+  Layout: BasicLayout,
+}
+
+export default () => (
+  <List
+    data={fakeData}
+    columns={columns}
+    components={components}
+  />
+)
