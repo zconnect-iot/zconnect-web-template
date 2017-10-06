@@ -1,7 +1,7 @@
 import React from 'react'
 import { ColumnDefinition } from 'griddle-react'
 
-import { GriddleViewLink } from 'zc-web/widgets'
+import { Link } from 'zc-web/widgets'
 import List, { BasicLayout } from 'zc-web/views/List'
 
 const fakeData = [
@@ -34,7 +34,7 @@ const columns = [
     id="link"
     key="link"
     title="Link"
-    customComponent={GriddleViewLink}
+    customComponent={Link}
   />),
 ]
 
