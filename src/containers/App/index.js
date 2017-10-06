@@ -8,6 +8,7 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import Page from 'zc-web/components/Page'
 
 import Buildings from '../Buildings'
+import Outlets from '../Outlets'
 import Account from '../Account'
 
 
@@ -25,6 +26,7 @@ function App({ navigate, location }) {
     >
       <Switch>
         <Route path="/buildings" component={Buildings} />
+        <Route path="/outlets" component={Outlets} />
         <Route path="/account" component={Account} />
         <Redirect from="/" exact to="/buildings" />
       </Switch>
