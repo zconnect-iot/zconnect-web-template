@@ -18,26 +18,25 @@ const fakeData = [
 
 const chartMaxDays = 30
 const barText = value => `${value} days (${(100 * value) / chartMaxDays}%)`
-const ChartBar = ({ value, color }) => (
+const ChartBar = ({ value, foregroundColor }) => (
   <ProgressBar
     maximum={chartMaxDays}
-    color={color}
-    textColor="white"
+    foregroundColor={foregroundColor}
     text={barText(value)}
     value={value}
   />
 )
 ChartBar.propTypes = {
   value: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
+  foregroundColor: PropTypes.string.isRequired,
 }
 
 const ChartCell = ({ value }) => (
   <ProgressChart>
     {/* Can use brand colours, e.g. 'info', 'danger', etc. */}
-    <ChartBar color="#44a0ee" value={value.get('hot')} />
+    <ChartBar foregroundColor="#44a0ee" value={value.get('hot')} />
     {/* Can also use raw CSS colours. */}
-    <ChartBar color="danger" value={value.get('cold')} />
+    <ChartBar foregroundColor="danger" value={value.get('cold')} />
   </ProgressChart>
 )
 ChartCell.propTypes = {
