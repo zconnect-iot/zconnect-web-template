@@ -29,7 +29,11 @@ const personalDetails = props => (
       <option value="onsite">On-site</option>
       <option value="offsite">Off-site</option>
     </SelectField>
-    <DateField name="date" label="Date" />
+    <DateField
+      name="date"
+      label="Date of birth"
+      placeholderText="Enter date of birth"
+    />
   </form>
 )
 
