@@ -10,7 +10,7 @@ import { Page, DrawerToggle } from 'zc-web/components'
 import Buildings from '../Buildings'
 import Outlets from '../Outlets'
 import Account from '../Account'
-import NotificationsList from '../Notifications/NotificationsList'
+import Notifications from '../Notifications'
 
 
 function App({ navigate, location }) {
@@ -26,7 +26,7 @@ function App({ navigate, location }) {
       ]}
       headerRightContent={
         <DrawerToggle iconName="ALERT">
-          <NotificationsList />
+          <Notifications />
         </DrawerToggle>
       }
     >

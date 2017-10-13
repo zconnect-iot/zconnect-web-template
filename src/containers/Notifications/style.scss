@@ -1,0 +1,28 @@
+@import '~theme/variables.scss';
+
+
+:global(.Notifications__list) {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 0;
+}
+
+:global(.Notifications__item) {
+  padding: 16px 0;
+  border-bottom: 1px solid $border-faint;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+:global(.Notifications__icon) {
+  margin-right: 10px;
+}
+
+:global(.Notifications__text) {
+  margin-right: 0.4em;
+  &:last-child {
+    margin-right: 0;
+  }
+}
