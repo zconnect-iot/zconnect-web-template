@@ -5,11 +5,12 @@ import { withRouter } from 'react-router'
 import { push } from 'react-router-redux'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import Page from 'zc-web/components/Page'
+import { Page, DrawerToggle } from 'zc-web/components'
 
 import Buildings from '../Buildings'
 import Outlets from '../Outlets'
 import Account from '../Account'
+import NotificationsList from '../Notifications/NotificationsList'
 
 
 function App({ navigate, location }) {
@@ -23,6 +24,11 @@ function App({ navigate, location }) {
         { title: 'Outlets', icon: 'FAUCET', route: '/outlets' },
         { title: 'Account', icon: 'PERSON', route: '/account' },
       ]}
+      headerRightContent={
+        <DrawerToggle iconName="ALERT">
+          <NotificationsList />
+        </DrawerToggle>
+      }
     >
       <Switch>
         <Route path="/buildings" component={Buildings} />

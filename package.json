@@ -48,6 +48,7 @@
     "prop-types": "^15.5.10",
     "raven-js": "^3.17.0",
     "react": "^15.6.1",
+    "react-bem-helper": "^1.4.1",
     "react-dom": "^15.6.1",
     "react-flexbox-grid": "^1.1.5",
     "react-proptypes": "^1.0.0",
