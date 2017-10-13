@@ -4,7 +4,7 @@ import BEMHelper from 'react-bem-helper'
 import { Card } from 'zc-web/views'
 import { Icon } from 'zc-web/components'
 
-import './style.scss'
+import './List.scss'
 
 const classes = BEMHelper('Notifications')
 
