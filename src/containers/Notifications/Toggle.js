@@ -1,13 +1,11 @@
 import React from 'react'
-import BEMHelper from 'react-bem-helper'
 
 import { Card } from 'zc-web/views'
 import { DrawerToggle, Button } from 'zc-web/components'
 
 import List from './List'
-import './Toggle.scss'
+import style from './Toggle.scss'
 
-const classes = new BEMHelper('NotificationsToggle')
 
 /** Demonstration component for toggling and configuring notifications. */
 export default class Toggle extends React.Component {
@@ -33,17 +31,17 @@ export default class Toggle extends React.Component {
         <List />
 
         <Card title="Position">
-          <div {...classes('controls')}>
-            <Button hollow {...classes('button')} action={this.setLeft}>
+          <div className={style.NotificationsToggle__controls}>
+            <Button hollow className={style.NotificationsToggle__button} action={this.setLeft}>
               Left
             </Button>
-            <Button hollow {...classes('button')} action={this.setRight}>
+            <Button hollow className={style.NotificationsToggle__button} action={this.setRight}>
               Right
             </Button>
-            <Button hollow {...classes('button')} action={this.setTop}>
+            <Button hollow className={style.NotificationsToggle__button} action={this.setTop}>
               Top
             </Button>
-            <Button hollow {...classes('button')} action={this.setBottom}>
+            <Button hollow className={style.NotificationsToggle__button} action={this.setBottom}>
               Bottom
             </Button>
           </div>

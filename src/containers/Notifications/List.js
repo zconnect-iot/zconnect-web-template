@@ -1,24 +1,21 @@
 import React from 'react'
-import BEMHelper from 'react-bem-helper'
 
 import { Card } from 'zc-web/views'
 import { Icon } from 'zc-web/components'
 
-import './List.scss'
-
-const classes = BEMHelper('Notifications')
+import style from './List.scss'
 
 const Notification = i => (
-  <li {...classes('item')}>
-    <Icon {...classes('icon')} name="WARNING" />
-    <span {...classes('text')}>Faucet {i} has been at risk for</span>
-    <span {...classes('text', null, 'text-danger')}>96hrs</span>
+  <li className={style.Notifications__item}>
+    <Icon className={style.Notifications__icon} name="WARNING" />
+    <span className={style.Notifications__text}>Faucet {i} has been at risk for</span>
+    <span className={style.Notifications__text}>96hrs</span>
   </li>
 )
 
 const groups = ['This week', 'Last week'].map(name => (
-  <Card {...classes('group')} title={name} key={name}>
-    <ul {...classes('list')}>
+  <Card title={name} key={name}>
+    <ul className={style.Notifications__list}>
       {Notification(0)}
       {Notification(1)}
       {Notification(2)}
@@ -28,5 +25,5 @@ const groups = ['This week', 'Last week'].map(name => (
 ))
 
 export default function Notifications() {
-  return <div {...classes()}>{groups}</div>
+  return <div className={style.Notifications}>{groups}</div>
 }

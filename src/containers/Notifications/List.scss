@@ -1,14 +1,14 @@
 @import '~theme/variables.scss';
 
 
-:global(.Notifications__list) {
+.Notifications__list {
   list-style: none;
   padding-left: 0;
   text-align: center;
   margin: 0 16px;
 }
 
-:global(.Notifications__item) {
+.Notifications__item {
   padding: 16px 0;
   border-bottom: 1px solid $border-faint;
   &:last-child {
@@ -16,11 +16,11 @@
   }
 }
 
-:global(.Notifications__icon) {
+.Notifications__icon {
   margin-right: 10px;
 }
 
-:global(.Notifications__text) {
+.Notifications__text {
   margin-right: 0.4em;
   &:last-child {
     margin-right: 0;
