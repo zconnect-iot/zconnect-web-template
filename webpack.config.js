@@ -99,7 +99,7 @@ if (isProd) {
     },
     {
       test: /\.css$/,
-      include: /(flexboxgrid|react-datepicker)/,
+      include: /(flexboxgrid|react-datepicker|animate)/,
       use: [
         'style-loader?sourceMap',
         'css-loader?modules=true&localIdentName=[hash:base64:6]&sourceMap',
@@ -121,7 +121,7 @@ else {
     },
     {
       test: /\.css$/,
-      include: /(flexboxgrid|react-datepicker)/,
+      include: /(flexboxgrid|react-datepicker|animate)/,
       use: [
         'style-loader?sourceMap',
         'css-loader?modules=true&localIdentName=[local]_[hash:base64:6]&sourceMap',
