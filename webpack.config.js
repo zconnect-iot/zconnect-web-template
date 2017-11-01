@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const path = require('path');
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -34,12 +35,17 @@ const config = {
   },
   resolve: {
     alias: {
-      // Override to provide an app-specific theme.
-      theme: path.resolve(__dirname, 'src/modules/zconnect-web/theme'),
-      assets: path.resolve(__dirname, 'src/assets')
+      theme: path.resolve(__dirname, './src/style/theme'),
+      assets: path.resolve(__dirname, './src/assets'),
+      config: path.resolve(__dirname, './src/config')
     },
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    }),
     new HtmlWebpackPlugin({
       title: 'ZConnect App',
       template: 'src/index.ejs'
@@ -81,16 +87,20 @@ if (isProd) {
         comments: false,
       },
     }),
-    new ExtractTextPlugin('style-[hash].css')
+    new ExtractTextPlugin('style-[hash].css'),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, './src/assets/logo-small.png'),
+      inject: true,
+    })
   );
 
   config.module.rules.push(
     {
       test: /\.scss$/,
+      exclude: /node_modules/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
-          'style-loader?sourceMap',
           'css-loader?modules=true&localIdentName=[hash:base64:6]&sourceMap',
           'postcss-loader?sourceMap',
           'sass-loader?sourceMap',
@@ -100,10 +110,12 @@ if (isProd) {
     {
       test: /\.css$/,
       include: /(flexboxgrid|react-datepicker|animate)/,
-      use: [
-        'style-loader?sourceMap',
-        'css-loader?modules=true&localIdentName=[hash:base64:6]&sourceMap',
-      ],
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [
+          'css-loader?modules=true&localIdentName=[hash:base64:6]&sourceMap',
+        ],
+      })
     }
   )
 }

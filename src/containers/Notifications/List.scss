@@ -10,7 +10,7 @@
 
 .Notifications__item {
   padding: 16px 0;
-  border-bottom: 1px solid $border-faint;
+  border-bottom: $border;
   &:last-child {
     border-bottom: none;
   }

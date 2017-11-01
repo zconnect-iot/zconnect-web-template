@@ -1,8 +1,5 @@
-@import '~theme/fonts.scss';
-@import '~theme/globals.scss';
-@import '~theme/icons.scss';
-@import '~theme/mixins.scss';
 @import '~theme/normalize.scss';
+@import '~theme/colors.scss';
 @import '~theme/variables.scss';
-
-@import './card.scss';
+@import '~theme/mixins.scss';
+@import '~theme/globals.scss';

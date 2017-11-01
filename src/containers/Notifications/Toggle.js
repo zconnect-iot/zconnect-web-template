@@ -27,7 +27,7 @@ export default class Toggle extends React.Component {
 
   render() {
     return (
-      <DrawerToggle iconName="ALERT" position={this.state.position}>
+      <DrawerToggle iconName="ALERT" position={this.state.position} className={style.DrawerToggle}>
         <List />
 
         <Card title="Position">
