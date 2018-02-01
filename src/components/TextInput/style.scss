@@ -1,0 +1,23 @@
+@import "~theme/variables.scss";
+
+:global(.TextInput) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0 $padding;
+
+  :global(.TextInput__Icon) {
+    margin-right: $padding;
+    flex-shrink: 0;
+  }
+
+  input {
+    border: none;
+    background: transparent;
+    flex: 1;
+  }
+}

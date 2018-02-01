@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Overlock frontend
+name: overlock-front
+version: 0.1.0

@@ -1,7 +1,13 @@
 {
   "parser": "babel-eslint",
   "extends": "zoetrope",
-
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": 'webpack.dev.js'
+      }
+    }
+  },
   "env": {
     "browser": true,
     "es6": true,
@@ -14,5 +20,8 @@
     "it": true,
     "expect": true,
     "sinon": true
+  },
+  "rules": {
+    "curly": ["error", "multi"]
   }
 }

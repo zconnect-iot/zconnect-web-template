@@ -1,56 +1,75 @@
-@import './colors';
+// Colours
+$brand-primary: #00B798;
+$brand-secondary: #2A9FD8;
+$brand-success: #00B898;
+$brand-warning: #F2994A;
+$brand-danger: #EB5757;
+$brand-info: #B5B5B5;
+$brand-grey: #B5B5B5;
 
-$text-color: $gray;
-$text-color-minor: $light-gray;
-$text-color-light: #f0f3f4;
+$device-color: #F2994A;
+$gateway-color: #00B898;
+$server-color: #702B84;
+$ui-color: #48B0F7;
 
-$link-color: $brand-primary;
+$black: #2C2C2C;
+$grey-light: #E6E6E6;
+$grey-x-light: #f2f2f2;
 
-$border-radius: 5px;
+$text-color: $black;
+$text-color-minor: #808080;
+$text-color-light: #f8f8f8;
+
+$link-color: $brand-secondary;
+
+$timeline-color: #bbb;
+
+$border-radius: 6px;
 $border-width: 1px;
+$border-faint: $grey-light;
 $border-style: solid;
-$border-color: $pale-gray;
+$border-color: $border-faint;
 $border: $border-width $border-style $border-color;
 
 // Structure
-$padding: 12px;
+$padding: 8px;
 
 // Backgrounds
-$bg-light: #fff;
-$bg-light-alternate: $off-white;
+$bg-light: #F5F5F5;
+$bg-light-alternate: aliceblue;
 $bg-dark: #f0f3f4;
 $bg-darker: #adadad;
 $header-bg-light: #f6f8f8;
 
 // Fonts
 $font-size-base: 12px;
-$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
 $font-family: $font-family-sans-serif;
 
-$font-size-largest: 1.3rem;
-$font-size-larger: 1.2rem;
-$font-size-large: 1.1rem;
-$font-size-small: 0.9rem;
-$font-size-smaller: 0.8rem;
-$font-size-smallest: 0.7rem;
+$font-size-largest: 1.6rem;
+$font-size-larger: 1.4rem;
+$font-size-large: 1.2rem;
+$font-size-small: 0.8rem;
+$font-size-smaller: 0.7rem;
+$font-size-smallest: 0.6rem;
 
 // Components
 $page-max-width: 1000px;
-$page-bg: white;
+$page-bg: $bg-light;
 
-$header-bg: #E6E8E9;
-$header-color: #3F7FAE;
+$header-bg: #2C313B;
+$header-color: white;
 
-$nav-bg: #202F39;
-$nav-color: #829EAF;
-$nav-active-color: #FFFFFF;
+$nav-bg: white;
+$nav-color: #808080;
+$nav-active-color: #48B0F7;
 
 $content-bg: $page-bg;
 $content-color: $text-color;
 $content-header-bg: #F5F8F8;
 $content-header-color: $text-color;
 
-$logo-small: url('assets/leocycle-small.png');
+$logo-small: url('assets/logo-light.svg');
 
 $tooltip-icon-color: $text-color;
 $tooltip-bg: $page-bg;
@@ -63,17 +82,20 @@ $drawer-alpha: 0.25;
 $drawer-inner-z-index: 1000;
 
 $codeblock-bg: $bg-light;
-$codeblock-border: $border;
-$codeblock-color: $text-color;
+$codeblock-border: 1px solid #E6E6E6;
+$codeblock-color: #808080;
 
-$panel-bg: $bg-light;
-$panel-color: $text-color;
+$panel-bg: white;
+$panel-color: $black;
 
-$statcard-bg: $bg-light;
+$statcard-bg: white;
 $statcard-color: $text-color-minor;
 
-$message-bg: $bg-light;
+$message-bg: white;
 $message-color: $text-color-minor;
+
+$spinner-color: $brand-primary;
+$spinner-speed: 1s;
 
 // Checkboxes.
 $checked-image-url: url('/icons/checked.svg');
@@ -81,3 +103,6 @@ $unchecked-image-url: url('/icons/unchecked.svg');
 
 // Animation
 $transition-duration: 0.5s;
+
+// Shadows
+$shadow: 1px 1px 3px 1px #e6e6e6;

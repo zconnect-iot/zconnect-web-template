@@ -1,0 +1,17 @@
+@import "~theme/variables.scss";
+
+.Issue {
+  position: relative;
+  flex: 1;
+  overflow: auto;
+
+  :global(.Panel) :global(.Panel__body) {
+    padding: 0;
+  }
+
+  :global(.Codeblock) {
+    background: white;
+    border-radius: 0;
+    border: none;
+  }
+}

@@ -1,10 +1,10 @@
 import { takeLatest } from 'redux-saga'
 import { call, put } from 'redux-saga/effects'
+import Raven from 'raven-js'
 
 import { getUserIdFromToken, getEmailFromToken } from 'zc-core/auth/utils'
 import { loginSuccess } from 'zc-core/auth/actions'
 
-import Sentry from '../../sentry'
 import jwtStore from '../../jwtStore'
 
 import { OPTIMISTIC_LOGIN } from './constants'
@@ -18,7 +18,7 @@ function* optimisticLoginSaga() {
     yield put(loginSuccess(userId, email))
   }
   catch (e) {
-    Sentry.captureMessage(e)
+    Raven.captureMessage(e)
   }
 }
 

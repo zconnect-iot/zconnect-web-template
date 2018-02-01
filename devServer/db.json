@@ -1,51 +1,873 @@
 {
   "issue": [
     {
-      "id": "16fd27068baf433b82eb8c7fada847da",
-      "error_id": "16fd27068baf433b82eb8c7fada847da",
-      "node_ids": ["node1", "node2", "node3"]
+      "id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+      "issue_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+      "trigger_event": {
+        "_id": {
+          "$oid": "100"
+        },
+        "severity": 50,
+        "type": "ERROR",
+        "message": "NullPointerException: Attempt to invoke virtual method 'boolean'",
+        "stacktrace": "java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.startsWith(java.lang.String)' on a null object reference\nat com.pusherman.networkinfo.RNNetworkInfo.getSSID(RNNetworkInfo.java:43)\nat java.lang.reflect.Method.invoke(Method.java)\nat com.facebook.react.cxxbridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)\nat com.facebook.react.cxxbridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:162)\nat com.facebook.react.bridge.queue.NativeRunnable.run(NativeRunnable.java)\nat android.os.Handler.handleCallback(Handler.java:751)\nat android.os.Handler.dispatchMessage(Handler.java:95)\nat com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:31)\nat android.os.Looper.loop(Looper.java:159)\nat com.facebook.react.bridge.queue.MessageQueueThreadImpl$3.run(MessageQueueThreadImpl.java:199)\nat java.lang.Thread.run(Thread.java:761)",
+        "state": {
+          "a": 3,
+          "b": 5,
+          "nested": {
+            "c": "test"
+          }
+        },
+        "ts": {
+          "$date": 1509120305000
+        },
+        "device": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj",
+        "metadata": {
+          "OS": "Arch Linux",
+          "Version": "1.0.0"
+        },
+        "process_id": "sensor_reader"
+      },
+      "events": {
+        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
+          "events": [
+            {
+              "_id": {
+                "$oid": "100"
+              },
+              "severity": 50,
+              "type": "ERROR",
+              "message": "NullPointerException: Attempt to invoke virtual method 'boolean'",
+              "stacktrace": "java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.startsWith(java.lang.String)' on a null object reference\nat com.pusherman.networkinfo.RNNetworkInfo.getSSID(RNNetworkInfo.java:43)\nat java.lang.reflect.Method.invoke(Method.java)\nat com.facebook.react.cxxbridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)\nat com.facebook.react.cxxbridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:162)\nat com.facebook.react.bridge.queue.NativeRunnable.run(NativeRunnable.java)\nat android.os.Handler.handleCallback(Handler.java:751)\nat android.os.Handler.dispatchMessage(Handler.java:95)\nat com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:31)\nat android.os.Looper.loop(Looper.java:159)\nat com.facebook.react.bridge.queue.MessageQueueThreadImpl$3.run(MessageQueueThreadImpl.java:199)\nat java.lang.Thread.run(Thread.java:761)",
+              "state": {
+                "a": 3,
+                "b": 5,
+                "nested": {
+                  "c": "test"
+                }
+              },
+              "ts": {
+                "$date": 1509120305000
+              },
+              "device": {
+                "$oid": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj"
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "99"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8639",
+              "ts": {
+                "$date": 1509120304000
+              },
+              "process_id": "main_loop"
+            },
+            {
+              "_id": {
+                "$oid": "98"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8631",
+              "ts": {
+                "$date": 1509120303000
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "97"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8642",
+              "ts": {
+                "$date": 1509120302000
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "96"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8640",
+              "ts": {
+                "$date": 1509120301000
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "95"
+              },
+              "severity": 20,
+              "type": "LIFECYCLE",
+              "_cls": "reboot",
+              "message": "Device rebooted",
+              "ts": {
+                "$date": 1509120300000
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "94"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Refreshing Clout Atomizer Putty",
+              "ts": {
+                "$date": 1509120299000
+              },
+              "process_id": "sensor_reader",
+              "related_devices": [
+                "df43ff34fw4f4a3fa34",
+                "node5"
+              ]
+            },
+            {
+              "_id": {
+                "$oid": "93"
+              },
+              "severity": 29,
+              "type": "WARN",
+              "message": "Cloud atomisation frequency requires refresh",
+              "ts": {
+                "$date": 1509120298000
+              },
+              "process_id": "main_loop"
+            },
+            {
+              "_id": {
+                "$oid": "92"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8639",
+              "ts": {
+                "$date": 1509120297000
+              },
+              "process_id": "sensor_reader",
+              "related_devices": [
+                "df43ff34fw4f4a3fa34",
+                "node4",
+                "node5",
+                "asxczq3we24"
+              ]
+            },
+            {
+              "_id": {
+                "$oid": "91"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8631",
+              "ts": {
+                "$date": 1509120296000
+              },
+              "process_id": "sensor_reader"
+            },
+            {
+              "_id": {
+                "$oid": "90"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8642",
+              "ts": {
+                "$date": 1509120295000
+              },
+              "process_id": "main_loop"
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8640",
+              "ts": {
+                "$date": 1509120294000
+              },
+              "process_id": "sensor_reader",
+              "related_devices": [
+                "df43ff34fw4f4a3fa34"
+              ]
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Requesting temperature data from Climair devices 8631 8639 8642 8640",
+              "ts": {
+                "$date": 1509120293000
+              },
+              "process_id": "main_loop"
+            }
+          ]
+        },
+        "dwt43tf344gfaswe4g4t": {
+          "events": [
+            {
+              "_id": {
+                "$oid": "93"
+              },
+              "severity": 29,
+              "type": "WARN",
+              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
+              "ts": {
+                "$date": 1509120298000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "92"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120297000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "91"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120296000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "90"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120295000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120294000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "99"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8639",
+              "ts": {
+                "$date": 1509120304000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "98"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8631",
+              "ts": {
+                "$date": 1509120303000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "97"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8642",
+              "ts": {
+                "$date": 1509120302000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "96"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from Climair 8640",
+              "ts": {
+                "$date": 1509120301000
+              }
+            }
+          ]
+        },
+        "df43ff34fw4f4a3fa34": {
+          "events": [
+            {
+              "_id": {
+                "$oid": "93"
+              },
+              "severity": 29,
+              "type": "WARN",
+              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
+              "ts": {
+                "$date": 1509120298000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "92"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120297000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "91"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120296000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "90"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120295000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120294000
+              }
+            }
+          ]
+        },
+        "asxczq3we24": {
+          "events": [
+            {
+              "_id": {
+                "$oid": "93"
+              },
+              "severity": 29,
+              "type": "WARN",
+              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
+              "ts": {
+                "$date": 1509120298000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "92"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120297000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "91"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120296000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "90"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120295000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120294000
+              }
+            }
+          ]
+        },
+        "sdgsdfgdsgsdgfg": {
+          "events": [
+            {
+              "_id": {
+                "$oid": "93"
+              },
+              "severity": 29,
+              "type": "WARN",
+              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
+              "ts": {
+                "$date": 1509120298000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "92"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120297000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "91"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120296000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "90"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120295000
+              }
+            },
+            {
+              "_id": {
+                "$oid": "89"
+              },
+              "severity": 20,
+              "type": "LOG",
+              "message": "Received data from SuperHub Sxo6Hgyo",
+              "ts": {
+                "$date": 1509120294000
+              }
+            }
+          ]
+        }
+      },
+      "devices": {
+        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
+          "_id": {
+            "$oid": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj"
+          },
+          "state": {
+            "connected": false
+          },
+          "issues_count": {
+            "86400": 0
+          },
+          "product": {
+            "name": "SuperHub",
+            "product_type": "gateway",
+            "client_product_name": "superhub"
+          },
+          "client_node_id": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj",
+          "user_meta": {
+            "OS": "Arch Linux, custom Novo build",
+            "Kernel version": "4.14.4",
+            "Chipset": "AFT2774",
+            "Version": "2.3b, updated 2017-12-08T14:06:40"
+          }
+        },
+        "dwt43tf344gfaswe4g4t": {
+          "_id": {
+            "$oid": "dwt43tf344gfaswe4g4t"
+          },
+          "state": {
+            "connected": true
+          },
+          "issues_count": {
+            "86400": 0
+          },
+          "product": {
+            "name": "ZConnect Server",
+            "product_type": "server",
+            "client_product_name": "zconnect_server"
+          },
+          "client_node_id": "dwt43tf344gfaswe4g4t",
+          "user_meta": {
+            "OS": "Arch Linux, custom Novo build",
+            "Kernel version": "4.14.4",
+            "Chipset": "AFT2774",
+            "Version": "2.3b, updated 2017-12-08T14:06:40"
+          }
+        },
+        "df43ff34fw4f4a3fa34": {
+          "_id": {
+            "$oid": "df43ff34fw4f4a3fa34"
+          },
+          "state": {
+            "connected": false
+          },
+          "issues_count": {
+            "86400": 50
+          },
+          "product": {
+            "name": "ZConnect Server",
+            "product_type": "server",
+            "client_product_name": "zconnect_server"
+          },
+          "client_node_id": "df43ff34fw4f4a3fa34",
+          "user_meta": {
+            "OS": "Arch Linux, custom Novo build",
+            "Kernel version": "4.14.4",
+            "Chipset": "AFT2774",
+            "Version": "2.3b, updated 2017-12-08T14:06:40"
+          }
+        },
+        "asxczq3we24": {
+          "_id": {
+            "$oid": "asxczq3we24"
+          },
+          "state": {
+            "connected": true
+          },
+          "issues_count": {
+            "86400": 0
+          },
+          "product": {
+            "name": "TRV+",
+            "product_type": "device",
+            "client_product_name": "trv_plus"
+          },
+          "client_node_id": "asxczq3we24",
+          "user_meta": {
+            "OS": "Arch Linux, custom Novo build",
+            "Kernel version": "4.14.4",
+            "Chipset": "AFT2774",
+            "Version": "2.3b, updated 2017-12-08T14:06:40"
+          }
+        },
+        "sdgsdfgdsgsdgfg": {
+          "_id": {
+            "$oid": "sdgsdfgdsgsdgfg"
+          },
+          "state": {
+            "connected": true
+          },
+          "issues_count": {
+            "86400": 0
+          },
+          "product": {
+            "name": "Unknown",
+            "product_type": "unknown",
+            "client_product_name": "unknown"
+          },
+          "client_node_id": "sdgsdfgdsgsdgfg"
+        }
+      },
+      "states": {
+        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
+          "a": 3,
+          "b": 5,
+          "nested": {
+            "c": "test"
+          }
+        },
+        "dwt43tf344gfaswe4g4t": {
+          "_id": "2676252756382763",
+          "index": 0,
+          "guid": "hjdhfdjkhkfjkld",
+          "isActive": false,
+          "balance": "$3,785.61"
+        },
+        "df43ff34fw4f4a3fa34": {
+          "_id": "2676252756382763",
+          "index": 0,
+          "guid": "hjdhfdjkhkfjkld",
+          "isActive": false,
+          "balance": "$3,785.61"
+        },
+        "asxczq3we24": {
+          "_id": "2676252756382763",
+          "index": 0,
+          "guid": "hjdhfdjkhkfjkld",
+          "isActive": false,
+          "balance": "$3,785.61"
+        },
+        "sdgsdfgdsgsdgfg": {
+          "guid": "hjdhfdjkhkfjkld",
+          "isActive": false,
+          "balance": "$3,785.61"
+        }
+      },
+      "resolved_at": {
+        "$date": 1509471496584
+      }
     }
   ],
   "issues": {
-    "error_ids": [{"id": "16fd27068baf433b82eb8c7fada847da", "tss": [{"$date": 1509471470380}], "first_recorded": {"$date": 1509471470380}}, {"id": "978b0f9a-b3de-4c5f-a0fb-6f9421f0eb49", "tss": [{"$date": 1509471496584}], "first_recorded": {"$date": 1509471496584}}, {"id": "28903c3a-d7af-4322-b124-340511c407de", "tss": [{"$date": 1509471521773}], "first_recorded": {"$date": 1509471521773}}, {"id": "4c9e40f7-9c60-4d87-9f93-c4126a2a91f0", "tss": [{"$date": 1509471669887}], "first_recorded": {"$date": 1509471669887}}, {"id": "09089476-8ccd-4dd2-915e-f85da1c87223", "tss": [{"$date": 1509471675930}], "first_recorded": {"$date": 1509471675930}}, {"id": "f2510fca-1ce4-492e-91d3-74c6ac725cac", "tss": [{"$date": 1509471698092}], "first_recorded": {"$date": 1509471698092}}, {"id": "c5704f7a-7874-438d-aa37-233d815ab3e3", "tss": [{"$date": 1509471711185}], "first_recorded": {"$date": 1509471711185}}, {"id": "717bb133-9535-4d67-ae52-c58e679718c6", "tss": [{"$date": 1509471747461}], "first_recorded": {"$date": 1509471747461}}, {"id": "6c6bd250-3523-4b85-9d57-0d4edfb4d8e7", "tss": [{"$date": 1509471753504}], "first_recorded": {"$date": 1509471753504}}, {"id": "4aaddca1-31a9-487d-bdae-50bfc5eafd9d", "tss": [{"$date": 1509471816947}], "first_recorded": {"$date": 1509471816947}}, {"id": "bda55379-a598-4531-92b9-e2134b8c6104", "tss": [{"$date": 1509471831048}], "first_recorded": {"$date": 1509471831048}}, {"id": "0da27de1-59a3-4b7f-9329-bbbd82bae49e", "tss": [{"$date": 1509471852196}], "first_recorded": {"$date": 1509471852196}}, {"id": "ae546a54-8f29-483a-adc7-51f1921e61a1", "tss": [{"$date": 1509471854210}], "first_recorded": {"$date": 1509471854210}}, {"id": "cf1524f8-2563-465a-be9a-59a0db272e71", "tss": [{"$date": 1509471875364}], "first_recorded": {"$date": 1509471875364}}, {"id": "940fecee-65da-477f-9ff0-e91cc046bdcd", "tss": [{"$date": 1509471895519}], "first_recorded": {"$date": 1509471895519}}, {"id": "cf856389-87d9-4244-a361-8f60bd1fe3cf", "tss": [{"$date": 1509471896978}], "first_recorded": {"$date": 1509471896978}}, {"id": "c2f573c2-22ac-499f-882a-33ba91878dce", "tss": [{"$date": 1509471899544}], "first_recorded": {"$date": 1509471899544}}, {"id": "ff4119f9-dda2-4b8b-95aa-2ecefafde850", "tss": [{"$date": 1509471940847}], "first_recorded": {"$date": 1509471940847}}, {"id": "415871ef-389d-46b4-9a75-827fbb8dcac8", "tss": [{"$date": 1509471954967}], "first_recorded": {"$date": 1509471954967}}, {"id": "b7cef4f1-5bb3-47b7-8601-84f0a9c5d849", "tss": [{"$date": 1509471960994}], "first_recorded": {"$date": 1509471960994}}, {"id": "639cafc2-8747-450a-9962-6f6b6c4cee60", "tss": [{"$date": 1509471964014}], "first_recorded": {"$date": 1509471964014}}, {"id": "fed13c20-19f6-4f20-b526-aa466af0faf2", "tss": [{"$date": 1509471969049}], "first_recorded": {"$date": 1509471969049}}, {"id": "94428fd6-5d27-4b13-bb99-c8d2979474a9", "tss": [{"$date": 1509471984159}], "first_recorded": {"$date": 1509471984159}}, {"id": "7ad9c258-c665-40f2-8a9b-10f6c2a9b18a", "tss": [{"$date": 1509471986308}], "first_recorded": {"$date": 1509471986308}}, {"id": "343a2ef0-44a6-49d1-9b76-e1c3888a5d73", "tss": [{"$date": 1509471994253}], "first_recorded": {"$date": 1509471994253}}, {"id": "628263a7-84f7-4036-a48d-abe5ce9a6983", "tss": [{"$date": 1509472055706}], "first_recorded": {"$date": 1509472055706}}, {"id": "d5df0386-abc7-4141-950f-73964061ef7a", "tss": [{"$date": 1509472073838}], "first_recorded": {"$date": 1509472073838}}, {"id": "f0ec3786-a59b-439d-b326-408d91ccdac7", "tss": [{"$date": 1509472222932}], "first_recorded": {"$date": 1509472222932}}, {"id": "0de0aeaf-c37a-4f86-ae8c-fcee2cd063af", "tss": [{"$date": 1509472236017}], "first_recorded": {"$date": 1509472236017}}, {"id": "8f1890f7-89dc-4fa6-9a57-5bd82901857f", "tss": [{"$date": 1509472259185}], "first_recorded": {"$date": 1509472259185}}, {"id": "3ec6fae4-b9e4-457e-b41c-d3ac80c20d0f", "tss": [{"$date": 1509472265220}], "first_recorded": {"$date": 1509472265220}}, {"id": "7292c719-2904-4896-bbf2-0fd8b02df1ea", "tss": [{"$date": 1509472268304}], "first_recorded": {"$date": 1509472268304}}, {"id": "a8324166-f904-4e56-958a-5802a79913eb", "tss": [{"$date": 1509472304492}], "first_recorded": {"$date": 1509472304492}}, {"id": "dca5893c-3157-4994-abf0-b9c871f3ef3d", "tss": [{"$date": 1509472311542}], "first_recorded": {"$date": 1509472311542}}, {"id": "9e410b89-9351-431e-b223-73914cd6020d", "tss": [{"$date": 1509472360894}], "first_recorded": {"$date": 1509472360894}}, {"id": "eb0eec9f-8222-4faa-b2cc-4d03185c439e", "tss": [{"$date": 1509472365928}], "first_recorded": {"$date": 1509472365928}}, {"id": "c7846500-54c3-49b6-8858-037382a13d68", "tss": [{"$date": 1509472371970}], "first_recorded": {"$date": 1509472371970}}, {"id": "a05b9e53-836a-4a68-bcc7-a758281ff25f", "tss": [{"$date": 1509472416283}], "first_recorded": {"$date": 1509472416283}}, {"id": "7303723a-0a46-4522-939f-b2b9a1c4b01b", "tss": [{"$date": 1509472457595}], "first_recorded": {"$date": 1509472457595}}, {"id": "2e43654f-891f-430d-9850-e800664861c4", "tss": [{"$date": 1509472461429}], "first_recorded": {"$date": 1509472461429}}, {"id": "958221e6-f901-442b-9ad8-9a7a067c96e6", "tss": [{"$date": 1509472472710}], "first_recorded": {"$date": 1509472472710}}, {"id": "4c4c3def-a714-4901-8134-d61aba1c308a", "tss": [{"$date": 1509472494873}], "first_recorded": {"$date": 1509472494873}}, {"id": "92def3da-ee48-431f-aca5-d80e0ea33231", "tss": [{"$date": 1509472533130}], "first_recorded": {"$date": 1509472533130}}, {"id": "e4cc4d29-5934-4425-9692-7f679902b538", "tss": [{"$date": 1509472552258}], "first_recorded": {"$date": 1509472552258}}, {"id": "3d108007-1bd9-432d-a52b-4871b18c14fd", "tss": [{"$date": 1509472556821}], "first_recorded": {"$date": 1509472556821}}, {"id": "30e6b30d-48c3-47ca-bbb3-b0305cb6d453", "tss": [{"$date": 1509472577439}], "first_recorded": {"$date": 1509472577439}}, {"id": "699f87a6-eb94-41bb-a2c8-f59c1f2c7fcb", "tss": [{"$date": 1509472595569}], "first_recorded": {"$date": 1509472595569}}, {"id": "953c6e03-0b9f-4d68-a4fd-eb9a65f930da", "tss": [{"$date": 1509472642906}], "first_recorded": {"$date": 1509472642906}}, {"id": "0c4a961b-addd-46a5-90b1-924082d2b0bd", "tss": [{"$date": 1509472662044}], "first_recorded": {"$date": 1509472662044}}, {"id": "cf14e65b-0cb7-43bf-a1df-31821624196d", "tss": [{"$date": 1509472669089}], "first_recorded": {"$date": 1509472669089}}, {"id": "fdacd34c-a3af-4084-beb9-2d5f455f96e6", "tss": [{"$date": 1509472678152}], "first_recorded": {"$date": 1509472678152}}, {"id": "f0b659fb-e70d-4b1f-b879-48d12071182d", "tss": [{"$date": 1509472683094}], "first_recorded": {"$date": 1509472683094}}, {"id": "a74c94dc-2fe6-4237-83c9-1a30124b90fd", "tss": [{"$date": 1509472706353}], "first_recorded": {"$date": 1509472706353}}, {"id": "9232dd86-ce15-4014-9262-fe5d3c3bef6c", "tss": [{"$date": 1509472711418}], "first_recorded": {"$date": 1509472711418}}, {"id": "91a84658-5a72-4345-af8f-01b74eef95bf", "tss": [{"$date": 1509472737579}], "first_recorded": {"$date": 1509472737579}}, {"id": "922ef010-913d-438f-a402-9683c1e6695f", "tss": [{"$date": 1509472778861}], "first_recorded": {"$date": 1509472778861}}, {"id": "87745272-ea81-46ab-abae-bab60594719d", "tss": [{"$date": 1509472802019}], "first_recorded": {"$date": 1509472802019}}, {"id": "2d27cc13-0892-44c6-9b5f-818c803c354a", "tss": [{"$date": 1509472853412}], "first_recorded": {"$date": 1509472853412}}, {"id": "169db72f-72f7-494e-8010-c574ba54957d", "tss": [{"$date": 1509472864504}], "first_recorded": {"$date": 1509472864504}}, {"id": "2ee31283-6cc7-40e1-aabb-c1ce75196895", "tss": [{"$date": 1509472870162}], "first_recorded": {"$date": 1509472870162}}, {"id": "f83cbc63-ef30-414c-82ca-11d4129c6397", "tss": [{"$date": 1509472876583}], "first_recorded": {"$date": 1509472876583}}, {"id": "75f06dd0-748e-4094-90d3-d045938a48ed", "tss": [{"$date": 1509472882372}], "first_recorded": {"$date": 1509472882372}}, {"id": "384f16ae-9841-4f2e-a616-0bad34fa58ad", "tss": [{"$date": 1509472918883}], "first_recorded": {"$date": 1509472918883}}, {"id": "64424941-2a97-4ef2-b325-4fafdb6ae768", "tss": [{"$date": 1509472939027}], "first_recorded": {"$date": 1509472939027}}, {"id": "f56f1d88-8dea-4291-a7e7-795dc5898b2c", "tss": [{"$date": 1509472950101}], "first_recorded": {"$date": 1509472950101}}, {"id": "d15c0ca1-d078-41cb-8385-d1b2c7ab1d29", "tss": [{"$date": 1509472956294}], "first_recorded": {"$date": 1509472956294}}, {"id": "208413cd-170e-4e58-bb30-d23a698cfa90", "tss": [{"$date": 1509472962658}], "first_recorded": {"$date": 1509472962658}}, {"id": "029b1db5-b958-48cf-8457-64b0a9dac843", "tss": [{"$date": 1509472974296}], "first_recorded": {"$date": 1509472974296}}, {"id": "34d63373-298e-44b7-8b28-8d46b0892b89", "tss": [{"$date": 1509472988392}], "first_recorded": {"$date": 1509472988392}}, {"id": "73ec2ad3-a098-42d2-91a3-33844784eb93", "tss": [{"$date": 1509472996512}], "first_recorded": {"$date": 1509472996512}}, {"id": "08a3d47c-f0bc-4c54-87f0-06f38ee11d75", "tss": [{"$date": 1509473005532}], "first_recorded": {"$date": 1509473005532}}, {"id": "c4560a67-a6de-4014-8943-6db772d8cc20", "tss": [{"$date": 1509473059945}], "first_recorded": {"$date": 1509473059945}}, {"id": "897070c6-d1fd-4cd4-9453-d1ecb15ca962", "tss": [{"$date": 1509473067996}], "first_recorded": {"$date": 1509473067996}}, {"id": "75978598-256e-4b12-aa3b-ca29135f9e02", "tss": [{"$date": 1509473074954}], "first_recorded": {"$date": 1509473074954}}, {"id": "2c4687fe-62ac-441a-a0a4-cefe0dbf48ed", "tss": [{"$date": 1509473094174}], "first_recorded": {"$date": 1509473094174}}, {"id": "a316f4dd-f2fb-496c-a09d-bd093d9c1c6d", "tss": [{"$date": 1509473118353}], "first_recorded": {"$date": 1509473118353}}, {"id": "f650ff58-601e-4eb7-a236-62c42ca45959", "tss": [{"$date": 1509473125509}], "first_recorded": {"$date": 1509473125509}}, {"id": "945d7830-d9f6-41b2-b490-7987149a28c9", "tss": [{"$date": 1509473144541}], "first_recorded": {"$date": 1509473144541}}, {"id": "dc8b4673-e04f-4506-949c-f90b162bdaf9", "tss": [{"$date": 1509473152158}], "first_recorded": {"$date": 1509473152158}}, {"id": "88e4ebbb-03db-492c-ad36-30cb901e3ec1", "tss": [{"$date": 1509473193900}], "first_recorded": {"$date": 1509473193900}}, {"id": "c4270d26-38bc-43e5-8d7c-c1e17915c22e", "tss": [{"$date": 1509473231176}], "first_recorded": {"$date": 1509473231176}}, {"id": "a5b04d22-e983-45bb-af03-e99eabc03720", "tss": [{"$date": 1509473242259}], "first_recorded": {"$date": 1509473242259}}, {"id": "5435f191-84d6-475c-9d5e-871064c966df", "tss": [{"$date": 1509473287574}], "first_recorded": {"$date": 1509473287574}}, {"id": "90b95973-70ee-4f7d-8f90-d9dbef556468", "tss": [{"$date": 1509473298653}], "first_recorded": {"$date": 1509473298653}}, {"id": "92940c4d-2b65-434d-bebf-409d864cc432", "tss": [{"$date": 1509473306627}], "first_recorded": {"$date": 1509473306627}}, {"id": "71547f8a-be96-45ed-9f90-f864c9a860b5", "tss": [{"$date": 1509473340967}], "first_recorded": {"$date": 1509473340967}}, {"id": "1a040e88-c351-49a7-bd3f-15e6981182c5", "tss": [{"$date": 1509473359102}], "first_recorded": {"$date": 1509473359102}}, {"id": "4ce63bc9-3d1e-40de-8995-ded88176eccf", "tss": [{"$date": 1509473379245}], "first_recorded": {"$date": 1509473379245}}, {"id": "9e6fb737-cec0-4b48-b26e-750455dfcfec", "tss": [{"$date": 1509473400394}], "first_recorded": {"$date": 1509473400394}}, {"id": "67c6772e-f472-4d44-887c-4cf4cc55c649", "tss": [{"$date": 1509473424576}], "first_recorded": {"$date": 1509473424576}}, {"id": "a50e8c34-471d-45e9-9a36-e2612cd36111", "tss": [{"$date": 1509473434650}], "first_recorded": {"$date": 1509473434650}}, {"id": "529c4011-aee1-49bb-875e-b1b4c3ce8478", "tss": [{"$date": 1509473443109}], "first_recorded": {"$date": 1509473443109}}, {"id": "ff2b9f1d-2c37-44ca-90c5-a433a4ac5369", "tss": [{"$date": 1509473462850}], "first_recorded": {"$date": 1509473462850}}, {"id": "fedbabff-3be9-47b6-b80c-bb8b60d78881", "tss": [{"$date": 1509473484011}], "first_recorded": {"$date": 1509473484011}}, {"id": "47067d41-e6ee-4217-86d8-5de116d77ce1", "tss": [{"$date": 1509473495088}], "first_recorded": {"$date": 1509473495088}}, {"id": "16e162ea-6534-4796-bd41-1a219c1c91c1", "tss": [{"$date": 1509473503917}], "first_recorded": {"$date": 1509473503917}}, {"id": "6bd00098-c9b7-42d5-a806-e87ef392b53d", "tss": [{"$date": 1509473548466}], "first_recorded": {"$date": 1509473548466}}, {"id": "d9cf77bb-f0d2-4525-9fa8-90d02883400d", "tss": [{"$date": 1509473612925}], "first_recorded": {"$date": 1509473612925}}, {"id": "8b005576-391e-45e7-abee-7ff7037ab23d", "tss": [{"$date": 1509473640110}], "first_recorded": {"$date": 1509473640110}}, {"id": "4f2d6b87-fc4a-4978-b6d4-9058b3866cc2", "tss": [{"$date": 1509473645151}], "first_recorded": {"$date": 1509473645151}}, {"id": "71b93f61-2855-488e-873d-48b83dc10d12", "tss": [{"$date": 1509473655222}], "first_recorded": {"$date": 1509473655222}}, {"id": "f85f7dbc-2fb5-4a8e-982b-d72c843be139", "tss": [{"$date": 1509473659247}], "first_recorded": {"$date": 1509473659247}}, {"id": "a5c0f79d-4dc9-46d1-91f3-c712885fc836", "tss": [{"$date": 1509473660253}], "first_recorded": {"$date": 1509473660253}}, {"id": "1bd60795-d2c6-4af4-8ace-7df78be93eb1", "tss": [{"$date": 1509473709609}], "first_recorded": {"$date": 1509473709609}}, {"id": "af4c8b1d-73b0-46b4-8b97-a5e9b206b8e0", "tss": [{"$date": 1509473737810}], "first_recorded": {"$date": 1509473737810}}, {"id": "75f1b81d-e3fd-4dc2-be67-4aa7d2da12bc", "tss": [{"$date": 1509473777103}], "first_recorded": {"$date": 1509473777103}}, {"id": "c9634ea9-0e32-4e85-ad37-06a7262c28f5", "tss": [{"$date": 1509473784180}], "first_recorded": {"$date": 1509473784180}}, {"id": "396c6251-baa8-4612-bfe7-e1994e5ff7a7", "tss": [{"$date": 1509473818413}], "first_recorded": {"$date": 1509473818413}}, {"id": "afb72ebf-db80-41b3-a0e5-f94925f2e273", "tss": [{"$date": 1509473831513}], "first_recorded": {"$date": 1509473831513}}, {"id": "acd7ec5d-d613-45a0-a8b6-c2ef0c4bb1dd", "tss": [{"$date": 1509473836551}], "first_recorded": {"$date": 1509473836551}}, {"id": "143b88a7-730c-48ef-99d5-523479377009", "tss": [{"$date": 1509473864748}], "first_recorded": {"$date": 1509473864748}}, {"id": "0d16d911-88a7-49bd-be81-bed62a7183d0", "tss": [{"$date": 1509473895966}], "first_recorded": {"$date": 1509473895966}}, {"id": "578f253f-9f3c-4b20-8f53-8d30bb929e23", "tss": [{"$date": 1509473937270}], "first_recorded": {"$date": 1509473937270}}, {"id": "8e6ee09f-0662-4008-8a9f-b8bafd572e84", "tss": [{"$date": 1509473942302}], "first_recorded": {"$date": 1509473942302}}, {"id": "23f50bc1-a863-4f9f-839e-bacf361ec874", "tss": [{"$date": 1509473952378}], "first_recorded": {"$date": 1509473952378}}, {"id": "27893a43-45b0-4dae-8890-c68f55d1767e", "tss": [{"$date": 1509473979576}], "first_recorded": {"$date": 1509473979576}}]
+    "issues": [
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1516284219082
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1516283249896
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      },
+      {
+        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+        "created_at": {
+          "$date": 1509471496584
+        },
+        "trigger_event": {
+          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
+        },
+        "resolved_at": {
+          "$date": 1509471496584
+        }
+      }
+    ]
   },
-  "events": [
-  	{
-  		"severity": 50,
-  		"message": "Message 1",
-  		"stacktrace": "Stacktrace\nMore Stacktrace\nEven more Stacktrace",
-  		"data": {
-  	 		"a": 1,
-  	  		"b": 2
-  		},
-  		"process_id": "init/001",
-  		"ts": {"$date": 1509120305000}
-  	},
-  	{
-  		"severity": 50,
-  		"message": "Message 2",
-  		"stacktrace": "Stacktrace\nMore Stacktrace\nEven more Stacktrace",
-  		"data": {
-  	 		"a": 1,
-  	  		"b": 2
-  		},
-  		"process_id": "trigger/123",
-  		"ts": {"$date": 1509120307000}
-  	},
-  	{
-  		"severity": 50,
-  		"message": "Message 3",
-  		"stacktrace": "Stacktrace\nMore Stacktrace\nEven more Stacktrace",
-  		"data": {
-  	 		"a": 1,
-  	  		"b": 2
-  		},
-  		"process_id": "init/002",
-  		"ts": {"$date": 1509120309000}
-  	}
-  ],
   "login": {
     "status": "Logged in",
-    "token":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb25Aem9ldHJvcGUuaW8iLCJnYXRld2F5X2FkbWluIjpbXSwiZXhwIjoxNTA5NzA3Njk1LCJpc3MiOiJodHRwczovL2JhY2tlbmQucHJvZDEubm92by1jbG91ZC5jb20iLCJvaWQiOnsiJG9pZCI6IjU5NzA4YzhlZDRkNWE2MDAwMWYyOWM5NCJ9LCJhdWQiOlsidXNlciJdLCJqdGkiOiI4YTZkNDE2My1hYjAyLTRkOTctODUwMy1lNGMyNDAwOTIzNzUiLCJnYXRld2F5X3VzZXIiOltdLCJpYXQiOjE1MDkxMDI4OTV9.bMqEh_S8KmVMoWXRch6FtY53gaeCRhZDbfHLnemUT4D--Y-KcsJ1OSsNdKHqkAXG9L2MIUMz3UkBDZEb0AFKb8BgQ2bbkKmAFUkkbN6wqWkUxOmM0O1pGl2W7j48td6sPCZbuzTkb8VB0_kjJ-gzzAt06JzGkLFtCJlDlMXiZMnKhO8u-W74Xm3pRAN2NKybc3ETOfnWODpGxIJ3vxLwpDFvfsOpfoikMP7bJwVUfnDZpk1j8qJG2wKou7MxMUx99sXPkxYtfcHht7qu9_Pw2S4cle5vwZ9-h9nStnZav5FIp8_7klnsmxvj0j2Xh2D6qcAYPCJPrsl6crAJ4WcIxvfEaKV5FOCF_YF3XS7tyoijdxg3zR6MaXi0y9AeH8d79PAMpe_6ZaCcibBM_7ru0WVAjtuG8SKWDtPyCms0RrD0TQ4lvn_xQUFQi651m4p4pjyU6f_6S0Enp3f7kr3dCrbnM0W2XcrZV0s3avHaHeu0dWVq4XmfrZEoV6COoqJjqgKAJgmOkzWTgEE8wzolueuWbOnYs0ax6T-HbrHcUetORddcJzDl8Dxz_afHbliA90mmNV97XD6PTkjUQ2aQXnlgN6unQ2NRhqcmhmmTg3u-24HMtUm2LOzP60tMfQvbSNZdWJvc_c7eVdSLZKYnJsu5x1DJm6vH1YjF5Oh1znw"
+    "token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb25Aem9ldHJvcGUuaW8iLCJnYXRld2F5X2FkbWluIjpbXSwiZXhwIjoxNTA5NzA3Njk1LCJpc3MiOiJodHRwczovL2JhY2tlbmQucHJvZDEubm92by1jbG91ZC5jb20iLCJvaWQiOnsiJG9pZCI6IjU5NzA4YzhlZDRkNWE2MDAwMWYyOWM5NCJ9LCJhdWQiOlsidXNlciJdLCJqdGkiOiI4YTZkNDE2My1hYjAyLTRkOTctODUwMy1lNGMyNDAwOTIzNzUiLCJnYXRld2F5X3VzZXIiOltdLCJpYXQiOjE1MDkxMDI4OTV9.bMqEh_S8KmVMoWXRch6FtY53gaeCRhZDbfHLnemUT4D--Y-KcsJ1OSsNdKHqkAXG9L2MIUMz3UkBDZEb0AFKb8BgQ2bbkKmAFUkkbN6wqWkUxOmM0O1pGl2W7j48td6sPCZbuzTkb8VB0_kjJ-gzzAt06JzGkLFtCJlDlMXiZMnKhO8u-W74Xm3pRAN2NKybc3ETOfnWODpGxIJ3vxLwpDFvfsOpfoikMP7bJwVUfnDZpk1j8qJG2wKou7MxMUx99sXPkxYtfcHht7qu9_Pw2S4cle5vwZ9-h9nStnZav5FIp8_7klnsmxvj0j2Xh2D6qcAYPCJPrsl6crAJ4WcIxvfEaKV5FOCF_YF3XS7tyoijdxg3zR6MaXi0y9AeH8d79PAMpe_6ZaCcibBM_7ru0WVAjtuG8SKWDtPyCms0RrD0TQ4lvn_xQUFQi651m4p4pjyU6f_6S0Enp3f7kr3dCrbnM0W2XcrZV0s3avHaHeu0dWVq4XmfrZEoV6COoqJjqgKAJgmOkzWTgEE8wzolueuWbOnYs0ax6T-HbrHcUetORddcJzDl8Dxz_afHbliA90mmNV97XD6PTkjUQ2aQXnlgN6unQ2NRhqcmhmmTg3u-24HMtUm2LOzP60tMfQvbSNZdWJvc_c7eVdSLZKYnJsu5x1DJm6vH1YjF5Oh1znw"
+  },
+  "user": {
+    "projects": [
+      {
+        "$oid": "57611ad494149d53bb843725"
+      }
+    ],
+    "fname": "Joe",
+    "lname": "Seed"
   }
 }

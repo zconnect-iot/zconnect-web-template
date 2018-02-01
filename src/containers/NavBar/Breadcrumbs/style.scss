@@ -1,0 +1,31 @@
+@import "~theme/variables.scss";
+
+.intersperseChevronsList {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    span {
+      cursor: pointer;
+    }
+
+    &:last-of-type {
+      color: $nav-active-color;
+      cursor: auto;
+
+      span {
+        cursor: auto;
+      }
+
+      :global(.Icon) {
+        visibility: hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+---
+
+deployment:
+  name: overlock-front
+  replicas: 1
+  port: 8000
+
+ingress:
+  # Also has to be overridden
+  # host_backend:
+  paths:
+    - /
+
+global_config:
+  name: exampleconfig
+  data:
+    GET_HOSTS_FROM: dns

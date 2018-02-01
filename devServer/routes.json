@@ -1,6 +1,6 @@
 {
-  "/api/v1/issue/:id": "/issue/:id",
+  "/api/v1/issues/:id": "/issue/:id",
   "/api/v1/issues": "/issues",
-  "/api/v1/nodes/:node_id/messages": "/events",
-  "/api/v1/users/login": "/login"
+  "/api/v1/users/login": "/login",
+  "/api/v1/users/:userId": "/user"
 }
