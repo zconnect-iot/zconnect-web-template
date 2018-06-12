@@ -1,21 +1,48 @@
-@import './mixins';
-@import './variables';
+@import './colors';
+
+$text-color: $gray;
+$text-color-minor: $light-gray;
+$text-color-light: $off-white;
+
+$border-radius: 5px;
+$border-width: 1px;
+$border-style: solid;
+$border-color: $pale-gray;
+$border: $border-width $border-style $border-color;
+
+// Structure
+$padding: 8px;
+
+// Backgrounds
+$bg-light: #fff;
+$bg-light-alternate: $off-white;
+$bg-dark: $pale-gray;
+$bg-darker: $lighter-gray;
+
+// Fonts
+$font-size-base: 12px;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+$font-family: $font-family-sans-serif;
+
+$font-size-largest: 1.3rem;
+$font-size-larger: 1.2rem;
+$font-size-large: 1.1rem;
+$font-size-small: 0.9rem;
+$font-size-smaller: 0.8rem;
+$font-size-smallest: 0.7rem;
+
+// Animations / transitions
+$transition-duration: 0.2s;
+
 
 html, body {
   font-family: $font-family;
   color: $text-color;
+  fill: $text-color;
   height: 100%;
-  background: $page-bg;
+  background: $bg-light;
   font-size: $font-size-base;
   background-attachment: fixed;
-}
-
-html>body>div {
-  height: 100%;
-}
-
-p {
-  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,99 +83,121 @@ h6 {
   &:global(success) { background-color: $brand-success; }
   &:global(warning) { background-color: $brand-warning; }
   &:global(danger) { background-color: $brand-danger; }
-  &:global(info) { background-color: $brand-info; }
+  &:global(info) { background-color: $brand-grey; }
   &:global(grey) { background-color: $brand-grey; }
 
   &:global(light) { background-color: $bg-light; }
   &:global(dark) { background-color: $bg-dark; }
   &:global(darker) { background-color: $bg-darker; }
-
-  &:global(device) { background-color: $device-color; }
-  &:global(ui) { background-color: $ui-color; }
-  &:global(gateway) { background-color: $gateway-color; }
-  &:global(server) { background-color: $server-color; }
-
 }
 :global(.text-) {
-  &:global(primary) { color: $brand-primary; fill: $brand-primary;  }
-  &:global(secondary) { color: $brand-secondary; fill: $brand-secondary;  }
+  &:global(primary) { color: $brand-primary; fill: $brand-primary; }
+  &:global(secondary) { color: $brand-secondary; fill: $brand-secondary; }
   &:global(success) { color: $brand-success; fill: $brand-success; }
-  &:global(warning) { color: $brand-warning; fill: $brand-warning }
+  &:global(warning) { color: $brand-warning; fill: $brand-warning; }
   &:global(danger) { color: $brand-danger; fill: $brand-danger; }
-  &:global(info) { color: $brand-info; fill: $brand-info; }
+  &:global(info) { color: $brand-grey; fill: $brand-grey; }
   &:global(grey) { color: $brand-grey; fill: $brand-grey; }
 
   &:global(minor) { color: $text-color-minor; fill: $text-color-minor; }
   &:global(light) { color: $text-color-light; fill: $text-color-light; }
-
-  &:global(device) { color: $device-color; fill: $device-color; }
-  &:global(ui) { color: $ui-color; fill: $ui-color; }
-  &:global(gateway) { color: $gateway-color; fill: $gateway-color; }
-  &:global(server) { color: $server-color; fill: $server-color; }
 }
 
-// Adding styles to components
-:global(.Panel) {
-  box-shadow: $shadow;
+:global(.Page .Content__header .Button) {
+  height: 30px;
+  min-width: initial;
+  padding: 2px 6px 2px 0;
 
-  :global(.Panel__header) {
-    padding-left: $padding*2;
+  > * {
+    margin-left: 6px;
+  }
+}
+
+:global(.Content__header) h4 {
+  font-size: 1.4rem;
+}
+
+:global(.List__filter) {
+  margin-bottom: 10px;
+}
+
+:global(.List__settings-toggle) {
+  display: none;
+}
+
+:global(.SelectField .SelectField__select) {
+  padding: 4px;
+  border-radius: 3px;
+}
+
+:global(.Logo) {
+
+  &:global(.Logo--small) {
+    margin-left: 15px;
+    min-width: 400px;
+    height: 25px;
   }
 
-  :global(.Panel__onClick) {
-    margin: -$padding * 2;
-    padding-right: $padding * 2;
-    padding-left: $padding * 6;
-    align-self: stretch;
+  // This removes the logo from the login page.
+  &:global(.Logo--large) {
+    height: 0px;
+  }
+}
 
-    &:hover {
-      background: linear-gradient(to left, $grey-x-light 70%, white)
+:global(.spinIcon) {
+  :global(.Icon) {
+    animation: spin 1s linear infinite;
+    transform-origin: 54% 50%;
+  }
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
     }
   }
+}
 
-  :global(.Panel__footer) {
+:global(.Card__title) {
+  height: 54px;
+  padding: 0 16px;
+  vertical-align: middle;
+}
+
+:global(.Card__border-top) {
+  padding: 20px;
+}
+
+:global(.margin-top) {
+  margin-top: $padding * 2;
+}
+
+:global(.List__pagination) {
+  margin-top: $padding;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  select, button {
+    height: 30px;
+    background: white;
+    border: 1px solid $brand-grey;
+    border-radius: $border-radius;
+    background: white;
+    color: $text-color;
+    font-size: 14px;
     cursor: pointer;
-
-    &:hover {
-      background: $grey-x-light;
-    }
   }
-}
 
-:global(.layout-splitter) {
-  position: relative;
-
-  &:after {
-    content: "";
-    width: 2px;
-    height: 18px;
-    left: 1px;
-    top: calc(50% - 9px);
-    position: absolute;
-    background: repeating-linear-gradient(white, white 2px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 5px)
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: white;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: white;
-
-  &:horizontal {
-    height: 10px;
-  }
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: lighten($brand-grey, 10%);
-
-  &:hover {
-    background: lighten($brand-grey, 20%);
+  select {
+    min-width: 36px;
+    margin: 0 $padding;
   }
 }

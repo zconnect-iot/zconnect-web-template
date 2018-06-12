@@ -1,8 +1,7 @@
-import { takeLatest } from 'redux-saga'
-import { call, put } from 'redux-saga/effects'
-import Raven from 'raven-js'
+import { call, put, takeLatest } from 'redux-saga/effects'
+import Sentry from 'raven-js'
 
-import { getUserIdFromToken, getEmailFromToken } from 'zc-core/auth/utils'
+import { decodeJWT } from 'zc-core/auth/utils'
 import { loginSuccess } from 'zc-core/auth/actions'
 
 import jwtStore from '../../jwtStore'
@@ -13,17 +12,15 @@ function* optimisticLoginSaga() {
   try {
     const token = yield call(jwtStore.get)
     if (!token) throw new Error('No jwt token stored')
-    const userId = getUserIdFromToken(token.password)
-    const email = getEmailFromToken(token.password)
-    yield put(loginSuccess(userId, email))
+    const jwtData = decodeJWT(token.password)
+    const { user_id, email } = jwtData
+    yield put(loginSuccess(user_id, email, jwtData))
   }
   catch (e) {
-    Raven.captureMessage(e)
+    Sentry.captureMessage(e)
   }
 }
 
 export default function* authWatcher() {
-  yield [
-    takeLatest(OPTIMISTIC_LOGIN, optimisticLoginSaga),
-  ]
+  yield takeLatest(OPTIMISTIC_LOGIN, optimisticLoginSaga)
 }

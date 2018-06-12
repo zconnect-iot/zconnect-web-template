@@ -1,48 +1,33 @@
-import deviceSVG from 'assets/device.svg'
-import gatewaySVG from 'assets/gateway.svg'
-import serverSVG from 'assets/server.svg'
-import uiSVG from 'assets/ui.svg'
-import unknownSVG from 'assets/unknown.svg'
+import { connect } from 'react-redux'
+import { plugins } from 'griddle-react'
+import { Map, List } from 'immutable'
+
+import { emptyMap, emptyList } from 'zc-core/utils'
 
 
-export const typeSvgMap = {
-  device: deviceSVG,
-  gateway: gatewaySVG,
-  server: serverSVG,
-  ui: uiSVG,
-  unknown: unknownSVG,
-}
-
-export const getImageForNodeType = type => typeSvgMap[type]
-
-export const addQueryToUrl = (search, props) => {
-  // Use .replace as do not want to keep adding to history everytime a event is selected
-  props.history.replace(`${props.location.pathname}${search}`)
-}
-
-export const removeQueryFromUrl = (search, props) => {
-  // Use .replace as do not want to keep adding to history everytime a event is selected
-  props.history.replace(props.location.pathname)
-}
-
-export const toCaps = str => str.charAt(0).toUpperCase() + str.slice(1)
-
-export const timeSince = (date) => {
-  const seconds = Math.floor((new Date() - date) / 1000)
-  const tag = (duration, units) => `${duration} ${units}${duration > 1 ? 's' : ''} ago`
-
-  const timeMap = [
-    ['year', 31536000],
-    ['month', 2592000],
-    ['week', 604800],
-    ['day', 86400],
-    ['hour', 3600],
-    ['minute', 60],
-  ]
-  for (let i = 0; i < timeMap.length; i += 1) {
-    const [unit, interval] = timeMap[i]
-    const duration = Math.floor(seconds / interval)
-    if (duration >= 1) return tag(duration, unit)
+// Helper HOC for passing row data to griddle column
+export const withRowData = connect((state, props) => {
+  const rowData = plugins.LocalPlugin.selectors.rowDataSelector(state, props)
+  return {
+    rowData,
   }
-  return 'Less than a minute ago'
-}
+})
+
+/* Validators */
+
+export const isEmail = value =>
+  (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    ? 'Invalid email address'
+    : undefined)
+
+export const isPhoneNumber = value =>
+  (value && !/^\+?[0-9]{11,}/.test(value)
+    ? 'Invalid phone number'
+    : undefined)
+
+export const required = value => (!value && 'Required')
+
+export const minLength = value => (value && value.length < 8 && 'Must be at least 8 characters')
+
+// Only works if first password field is named password
+export const passwordsMatch = (value, fields) => (value !== fields.get('password') && "Passwords don't match")

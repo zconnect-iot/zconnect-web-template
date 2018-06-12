@@ -1,0 +1,12 @@
+@import '~theme/variables.scss';
+
+.FormSection {
+  border: 1px dashed $border-color;
+  h5 {
+    border-bottom: 1px dashed $border-color;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+}

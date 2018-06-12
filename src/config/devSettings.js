@@ -1,4 +1,4 @@
 export default {
-  // Use webpack to proxy requests to mock or real server as appropriate
-  baseURL: 'http://localhost:3000',
+  baseURL: `${window.location.protocol}//${window.location.hostname}:${window.location.port}`,
+  // baseURL: 'https://rtrzc2.olapi.io',
 }

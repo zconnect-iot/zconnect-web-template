@@ -1,6 +1,6 @@
 import { apiSagas, authSagas } from 'zc-core'
 import rootWatcher from './containers/Root/sagas'
-import userWatcher from './containers/User/sagas'
+
 
 export default [
   // Core
@@ -9,5 +9,4 @@ export default [
 
   // App
   rootWatcher,
-  userWatcher,
 ]

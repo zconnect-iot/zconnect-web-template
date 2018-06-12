@@ -1,873 +1,193 @@
 {
-  "issue": [
+  "login-admin": {
+    "status": "Logged in",
+    "token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkB6b2V0cm9wZS5pbyIsImdhdGV3YXlfYWRtaW4iOltdLCJleHAiOjE1MDk3MDc2OTUsImlzcyI6Imh0dHBzOi8vYmFja2VuZC5wcm9kMS5ub3ZvLWNsb3VkLmNvbSIsIm9pZCI6eyIkb2lkIjoiNTk3MDhjOGVkNGQ1YTYwMDAxZjI5Yzk0In0sImF1ZCI6WyJhZG1pbiJdLCJqdGkiOiI4YTZkNDE2My1hYjAyLTRkOTctODUwMy1lNGMyNDAwOTIzNzUiLCJnYXRld2F5X3VzZXIiOltdLCJpYXQiOjE1MDkxMDI4OTV9.-lbyx8qcT8A6LQguVOeqt0UlhAFGhIAXNPAFZHunh-Q"
+  },
+  "login-user": {
+    "status": "Logged in",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJmMzc0NWIxZGZiZWY0ZmNjYWIxYWRmZTU5ZDUzZWI2YiIsImV4cCI6MTUyMzQ1MjA0NCwidG9rZW5fdHlwZSI6InNsaWRpbmciLCJlbWFpbCI6ImpvZXNlZWRAem9ldHJvcGUuaW8iLCJydHJfb3JncyI6eyJjb21wYW5pZXMiOltdLCJzaXRlcyI6W10sImRpc3RyaWJ1dG9ycyI6W3sibmFtZSI6IkNvb2wgZGlzdHJpYnV0b3IiLCJpZCI6Mn1dfSwiZ3JvdXBzIjpbeyJpZCI6MSwibmFtZSI6InpjLXRlc3QtZ3JvdXAifSx7ImlkIjoyLCJuYW1lIjoiQ29vbCBkaXN0cmlidXRvciJ9LHsiaWQiOjUsIm5hbWUiOiJ0ZXN0IGdyb3VwIn1dLCJ1c2VyX2lkIjoyLCJyZWZyZXNoX2V4cCI6MTUyMzUzODE0NH0.Zf68n3T0hDbiCgWZFvaSmdydi0ROK43XzOA3pK73m7N9Gjed45yyWEJ9dAzqKt77KKU8i5HteQVOkXNcNDhjWa7ShLZI_yExs0vEWHi3zAs8goP5d_o5kRiNpJU5Ci2lWRhJk_ihePid4POyetAOkc-ZgpGjCa7zpYK1WbylajxF_H2nKjOLPeFoVQBEei9fVNlHHJ4re-smqC4hnC7CLTXiXnwkueksVNX07cy5wrosnx1BzuDral8eKRTeD5E9eGZTHOWSP3eihSqEyY2lsOJ27RxfqRThyILKGySFpNuAbaTtvdFjAhDkdmfZDx4iOOuE9eR5vEqSTqHNI0EU1w"
+  },
+  "users": [
     {
-      "id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-      "issue_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-      "trigger_event": {
-        "_id": {
-          "$oid": "100"
-        },
-        "severity": 50,
-        "type": "ERROR",
-        "message": "NullPointerException: Attempt to invoke virtual method 'boolean'",
-        "stacktrace": "java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.startsWith(java.lang.String)' on a null object reference\nat com.pusherman.networkinfo.RNNetworkInfo.getSSID(RNNetworkInfo.java:43)\nat java.lang.reflect.Method.invoke(Method.java)\nat com.facebook.react.cxxbridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)\nat com.facebook.react.cxxbridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:162)\nat com.facebook.react.bridge.queue.NativeRunnable.run(NativeRunnable.java)\nat android.os.Handler.handleCallback(Handler.java:751)\nat android.os.Handler.dispatchMessage(Handler.java:95)\nat com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:31)\nat android.os.Looper.loop(Looper.java:159)\nat com.facebook.react.bridge.queue.MessageQueueThreadImpl$3.run(MessageQueueThreadImpl.java:199)\nat java.lang.Thread.run(Thread.java:761)",
-        "state": {
-          "a": 3,
-          "b": 5,
-          "nested": {
-            "c": "test"
-          }
-        },
-        "ts": {
-          "$date": 1509120305000
-        },
-        "device": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj",
-        "metadata": {
-          "OS": "Arch Linux",
-          "Version": "1.0.0"
-        },
-        "process_id": "sensor_reader"
-      },
-      "events": {
-        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
-          "events": [
-            {
-              "_id": {
-                "$oid": "100"
-              },
-              "severity": 50,
-              "type": "ERROR",
-              "message": "NullPointerException: Attempt to invoke virtual method 'boolean'",
-              "stacktrace": "java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.startsWith(java.lang.String)' on a null object reference\nat com.pusherman.networkinfo.RNNetworkInfo.getSSID(RNNetworkInfo.java:43)\nat java.lang.reflect.Method.invoke(Method.java)\nat com.facebook.react.cxxbridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)\nat com.facebook.react.cxxbridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:162)\nat com.facebook.react.bridge.queue.NativeRunnable.run(NativeRunnable.java)\nat android.os.Handler.handleCallback(Handler.java:751)\nat android.os.Handler.dispatchMessage(Handler.java:95)\nat com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:31)\nat android.os.Looper.loop(Looper.java:159)\nat com.facebook.react.bridge.queue.MessageQueueThreadImpl$3.run(MessageQueueThreadImpl.java:199)\nat java.lang.Thread.run(Thread.java:761)",
-              "state": {
-                "a": 3,
-                "b": 5,
-                "nested": {
-                  "c": "test"
-                }
-              },
-              "ts": {
-                "$date": 1509120305000
-              },
-              "device": {
-                "$oid": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj"
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "99"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8639",
-              "ts": {
-                "$date": 1509120304000
-              },
-              "process_id": "main_loop"
-            },
-            {
-              "_id": {
-                "$oid": "98"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8631",
-              "ts": {
-                "$date": 1509120303000
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "97"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8642",
-              "ts": {
-                "$date": 1509120302000
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "96"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8640",
-              "ts": {
-                "$date": 1509120301000
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "95"
-              },
-              "severity": 20,
-              "type": "LIFECYCLE",
-              "_cls": "reboot",
-              "message": "Device rebooted",
-              "ts": {
-                "$date": 1509120300000
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "94"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Refreshing Clout Atomizer Putty",
-              "ts": {
-                "$date": 1509120299000
-              },
-              "process_id": "sensor_reader",
-              "related_devices": [
-                "df43ff34fw4f4a3fa34",
-                "node5"
-              ]
-            },
-            {
-              "_id": {
-                "$oid": "93"
-              },
-              "severity": 29,
-              "type": "WARN",
-              "message": "Cloud atomisation frequency requires refresh",
-              "ts": {
-                "$date": 1509120298000
-              },
-              "process_id": "main_loop"
-            },
-            {
-              "_id": {
-                "$oid": "92"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8639",
-              "ts": {
-                "$date": 1509120297000
-              },
-              "process_id": "sensor_reader",
-              "related_devices": [
-                "df43ff34fw4f4a3fa34",
-                "node4",
-                "node5",
-                "asxczq3we24"
-              ]
-            },
-            {
-              "_id": {
-                "$oid": "91"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8631",
-              "ts": {
-                "$date": 1509120296000
-              },
-              "process_id": "sensor_reader"
-            },
-            {
-              "_id": {
-                "$oid": "90"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8642",
-              "ts": {
-                "$date": 1509120295000
-              },
-              "process_id": "main_loop"
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8640",
-              "ts": {
-                "$date": 1509120294000
-              },
-              "process_id": "sensor_reader",
-              "related_devices": [
-                "df43ff34fw4f4a3fa34"
-              ]
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Requesting temperature data from Climair devices 8631 8639 8642 8640",
-              "ts": {
-                "$date": 1509120293000
-              },
-              "process_id": "main_loop"
-            }
-          ]
-        },
-        "dwt43tf344gfaswe4g4t": {
-          "events": [
-            {
-              "_id": {
-                "$oid": "93"
-              },
-              "severity": 29,
-              "type": "WARN",
-              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
-              "ts": {
-                "$date": 1509120298000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "92"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120297000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "91"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120296000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "90"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120295000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120294000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "99"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8639",
-              "ts": {
-                "$date": 1509120304000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "98"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8631",
-              "ts": {
-                "$date": 1509120303000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "97"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8642",
-              "ts": {
-                "$date": 1509120302000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "96"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from Climair 8640",
-              "ts": {
-                "$date": 1509120301000
-              }
-            }
-          ]
-        },
-        "df43ff34fw4f4a3fa34": {
-          "events": [
-            {
-              "_id": {
-                "$oid": "93"
-              },
-              "severity": 29,
-              "type": "WARN",
-              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
-              "ts": {
-                "$date": 1509120298000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "92"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120297000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "91"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120296000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "90"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120295000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120294000
-              }
-            }
-          ]
-        },
-        "asxczq3we24": {
-          "events": [
-            {
-              "_id": {
-                "$oid": "93"
-              },
-              "severity": 29,
-              "type": "WARN",
-              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
-              "ts": {
-                "$date": 1509120298000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "92"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120297000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "91"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120296000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "90"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120295000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120294000
-              }
-            }
-          ]
-        },
-        "sdgsdfgdsgsdgfg": {
-          "events": [
-            {
-              "_id": {
-                "$oid": "93"
-              },
-              "severity": 29,
-              "type": "WARN",
-              "message": "Expected data from SuperHub Sxo6Hgyo, got none. Retrying in 5...",
-              "ts": {
-                "$date": 1509120298000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "92"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120297000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "91"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120296000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "90"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120295000
-              }
-            },
-            {
-              "_id": {
-                "$oid": "89"
-              },
-              "severity": 20,
-              "type": "LOG",
-              "message": "Received data from SuperHub Sxo6Hgyo",
-              "ts": {
-                "$date": 1509120294000
-              }
-            }
-          ]
-        }
-      },
-      "devices": {
-        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
-          "_id": {
-            "$oid": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj"
-          },
-          "state": {
-            "connected": false
-          },
-          "issues_count": {
-            "86400": 0
-          },
-          "product": {
-            "name": "SuperHub",
-            "product_type": "gateway",
-            "client_product_name": "superhub"
-          },
-          "client_node_id": "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj",
-          "user_meta": {
-            "OS": "Arch Linux, custom Novo build",
-            "Kernel version": "4.14.4",
-            "Chipset": "AFT2774",
-            "Version": "2.3b, updated 2017-12-08T14:06:40"
-          }
-        },
-        "dwt43tf344gfaswe4g4t": {
-          "_id": {
-            "$oid": "dwt43tf344gfaswe4g4t"
-          },
-          "state": {
-            "connected": true
-          },
-          "issues_count": {
-            "86400": 0
-          },
-          "product": {
-            "name": "ZConnect Server",
-            "product_type": "server",
-            "client_product_name": "zconnect_server"
-          },
-          "client_node_id": "dwt43tf344gfaswe4g4t",
-          "user_meta": {
-            "OS": "Arch Linux, custom Novo build",
-            "Kernel version": "4.14.4",
-            "Chipset": "AFT2774",
-            "Version": "2.3b, updated 2017-12-08T14:06:40"
-          }
-        },
-        "df43ff34fw4f4a3fa34": {
-          "_id": {
-            "$oid": "df43ff34fw4f4a3fa34"
-          },
-          "state": {
-            "connected": false
-          },
-          "issues_count": {
-            "86400": 50
-          },
-          "product": {
-            "name": "ZConnect Server",
-            "product_type": "server",
-            "client_product_name": "zconnect_server"
-          },
-          "client_node_id": "df43ff34fw4f4a3fa34",
-          "user_meta": {
-            "OS": "Arch Linux, custom Novo build",
-            "Kernel version": "4.14.4",
-            "Chipset": "AFT2774",
-            "Version": "2.3b, updated 2017-12-08T14:06:40"
-          }
-        },
-        "asxczq3we24": {
-          "_id": {
-            "$oid": "asxczq3we24"
-          },
-          "state": {
-            "connected": true
-          },
-          "issues_count": {
-            "86400": 0
-          },
-          "product": {
-            "name": "TRV+",
-            "product_type": "device",
-            "client_product_name": "trv_plus"
-          },
-          "client_node_id": "asxczq3we24",
-          "user_meta": {
-            "OS": "Arch Linux, custom Novo build",
-            "Kernel version": "4.14.4",
-            "Chipset": "AFT2774",
-            "Version": "2.3b, updated 2017-12-08T14:06:40"
-          }
-        },
-        "sdgsdfgdsgsdgfg": {
-          "_id": {
-            "$oid": "sdgsdfgdsgsdgfg"
-          },
-          "state": {
-            "connected": true
-          },
-          "issues_count": {
-            "86400": 0
-          },
-          "product": {
-            "name": "Unknown",
-            "product_type": "unknown",
-            "client_product_name": "unknown"
-          },
-          "client_node_id": "sdgsdfgdsgsdgfg"
-        }
-      },
-      "states": {
-        "Sxo6Hgyo9ELQMFJW5ENLkhG6GvWmaVj": {
-          "a": 3,
-          "b": 5,
-          "nested": {
-            "c": "test"
-          }
-        },
-        "dwt43tf344gfaswe4g4t": {
-          "_id": "2676252756382763",
-          "index": 0,
-          "guid": "hjdhfdjkhkfjkld",
-          "isActive": false,
-          "balance": "$3,785.61"
-        },
-        "df43ff34fw4f4a3fa34": {
-          "_id": "2676252756382763",
-          "index": 0,
-          "guid": "hjdhfdjkhkfjkld",
-          "isActive": false,
-          "balance": "$3,785.61"
-        },
-        "asxczq3we24": {
-          "_id": "2676252756382763",
-          "index": 0,
-          "guid": "hjdhfdjkhkfjkld",
-          "isActive": false,
-          "balance": "$3,785.61"
-        },
-        "sdgsdfgdsgsdgfg": {
-          "guid": "hjdhfdjkhkfjkld",
-          "isActive": false,
-          "balance": "$3,785.61"
-        }
-      },
-      "resolved_at": {
-        "$date": 1509471496584
+      "id": 1,
+      "first_name": "Joedddd",
+      "last_name": "Seeds",
+      "email": "joeseed@zoetrope.io",
+      "organisation": {
+        "name": "BP",
+        "type": "company",
+        "id": 2
       }
+    },
+    {
+      "id": 2,
+      "first_name": "Jimmy",
+      "last_name": "Seedless",
+      "email": "jimseed@zoetrope.io",
+      "organisation": {
+        "name": "BEZE",
+        "type": "distributor",
+        "id": 1
+      },
+      "password": "11111111",
+      "password2": "11111111"
     }
   ],
-  "issues": {
-    "issues": [
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1516284219082
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
+  "subscriptions": [
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1516283249896
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        }
+      "category": "business metrics",
+      "min_severity": 0,
+      "type": "email",
+      "id": 1
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        }
+      "category": "maintenance",
+      "min_severity": 20,
+      "type": "push",
+      "id": 2
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
+      "category": "system",
+      "min_severity": 30,
+      "type": "sms",
+      "id": 3
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
+      "category": "system",
+      "min_severity": 30,
+      "type": "push",
+      "id": 4
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        }
+      "category": "system",
+      "min_severity": 30,
+      "type": "email",
+      "id": 5
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
+      "category": "maintenance",
+      "min_severity": 20,
+      "type": "sms",
+      "id": 6
+    },
+    {
+      "organization": {
+        "id": 2
       },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      },
-      {
-        "_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
-        "created_at": {
-          "$date": 1509471496584
-        },
-        "trigger_event": {
-          "message": "NullPointerException: Attempt to invoke virtual method 'boolean'"
-        },
-        "resolved_at": {
-          "$date": 1509471496584
-        }
-      }
-    ]
-  },
-  "login": {
-    "status": "Logged in",
-    "token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb25Aem9ldHJvcGUuaW8iLCJnYXRld2F5X2FkbWluIjpbXSwiZXhwIjoxNTA5NzA3Njk1LCJpc3MiOiJodHRwczovL2JhY2tlbmQucHJvZDEubm92by1jbG91ZC5jb20iLCJvaWQiOnsiJG9pZCI6IjU5NzA4YzhlZDRkNWE2MDAwMWYyOWM5NCJ9LCJhdWQiOlsidXNlciJdLCJqdGkiOiI4YTZkNDE2My1hYjAyLTRkOTctODUwMy1lNGMyNDAwOTIzNzUiLCJnYXRld2F5X3VzZXIiOltdLCJpYXQiOjE1MDkxMDI4OTV9.bMqEh_S8KmVMoWXRch6FtY53gaeCRhZDbfHLnemUT4D--Y-KcsJ1OSsNdKHqkAXG9L2MIUMz3UkBDZEb0AFKb8BgQ2bbkKmAFUkkbN6wqWkUxOmM0O1pGl2W7j48td6sPCZbuzTkb8VB0_kjJ-gzzAt06JzGkLFtCJlDlMXiZMnKhO8u-W74Xm3pRAN2NKybc3ETOfnWODpGxIJ3vxLwpDFvfsOpfoikMP7bJwVUfnDZpk1j8qJG2wKou7MxMUx99sXPkxYtfcHht7qu9_Pw2S4cle5vwZ9-h9nStnZav5FIp8_7klnsmxvj0j2Xh2D6qcAYPCJPrsl6crAJ4WcIxvfEaKV5FOCF_YF3XS7tyoijdxg3zR6MaXi0y9AeH8d79PAMpe_6ZaCcibBM_7ru0WVAjtuG8SKWDtPyCms0RrD0TQ4lvn_xQUFQi651m4p4pjyU6f_6S0Enp3f7kr3dCrbnM0W2XcrZV0s3avHaHeu0dWVq4XmfrZEoV6COoqJjqgKAJgmOkzWTgEE8wzolueuWbOnYs0ax6T-HbrHcUetORddcJzDl8Dxz_afHbliA90mmNV97XD6PTkjUQ2aQXnlgN6unQ2NRhqcmhmmTg3u-24HMtUm2LOzP60tMfQvbSNZdWJvc_c7eVdSLZKYnJsu5x1DJm6vH1YjF5Oh1znw"
-  },
-  "user": {
-    "projects": [
-      {
-        "$oid": "57611ad494149d53bb843725"
-      }
-    ],
-    "fname": "Joe",
-    "lname": "Seed"
-  }
+      "category": "business metrics",
+      "min_severity": 0,
+      "type": "sms",
+      "id": 9
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 20,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "maintenance",
+      "notify": false
+    },
+    {
+      "id": 2,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 30,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "system",
+      "notify": false
+    },
+    {
+      "id": 3,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 30,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "maintenance",
+      "notify": true
+    },
+    {
+      "id": 4,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 40,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "business metric",
+      "notify": true
+    },
+    {
+      "id": 5,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 40,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "other",
+      "notify": false
+    },
+    {
+      "id": 6,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 30,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "maintenance",
+      "notify": true
+    },
+    {
+      "id": 7,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 20,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "business metric",
+      "notify": false
+    },
+    {
+      "id": 8,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 40,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "business metric",
+      "notify": false
+    },
+    {
+      "id": 9,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 30,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "business metric",
+      "notify": false
+    },
+    {
+      "id": 10,
+      "verb": "reported",
+      "description": "Open time was less than 10%",
+      "severity": 20,
+      "created_at": "1998-01-01T01:00:00Z",
+      "category": "business metric",
+      "notify": true
+    }
+  ]
 }

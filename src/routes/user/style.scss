@@ -1,0 +1,17 @@
+@import '~theme/variables.scss';
+
+.User {
+  :global(.Content__body) h3 {
+    margin-bottom: $padding;
+    display: flex;
+    align-items: center;
+
+    :global(.Icon) {
+      margin-right: $padding;
+    }
+
+    :global(.Link) {
+      color: $text-color;
+    }
+  }
+}

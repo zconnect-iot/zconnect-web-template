@@ -1,0 +1,11 @@
+@import '~theme/variables.scss';
+
+.Notifications {
+  margin-bottom: $padding * 2;
+
+  :global(.SubsSettings) {
+    :global(.SubsSettings__title) {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,18 +1,38 @@
 import React from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 
-import Dashboard from './dashboard'
-import Issues from './issues'
-import Issue from './issue'
+import { selectRoutesForRole } from 'selectors'
+
+import Devices from './devices'
+import Users from './users'
+import Account from './account'
+import NotFound from './notFound'
 
 
-export default function Routes() {
+function Routes({ routes }) {
   return (
     <Switch>
-      <Route path="/" exact component={Dashboard} />
-      <Route path="/issues" exact component={Issues} />
-      <Route path="/issues/:issueId" component={Issue} />
-      <Redirect to="/" /> {/* TODO: Add fallback 'Page not found' component */}
+      { routes.includes('devices') && <Route path="/devices" component={Devices} />}
+      { routes.includes('users') && <Route path="/users" component={Users} />}
+      { routes.includes('account') && <Route path="/account" component={Account} />}
+      <Route path="/" exact><Redirect to="/devices" /></Route>
+      <Route component={NotFound} />
     </Switch>
   )
 }
+
+Routes.propTypes = {
+  routes: PropTypes.arrayOf(
+    PropTypes.string.isRequired,
+  ).isRequired,
+}
+
+const mapStateToProps = state => ({
+  routes: selectRoutesForRole(state),
+})
+
+export default withRouter(connect(
+  mapStateToProps,
+)(Routes))

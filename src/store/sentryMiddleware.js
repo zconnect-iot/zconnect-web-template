@@ -2,7 +2,7 @@ import Raven from 'raven-js'
 import AppSettings from 'config/AppSettings'
 
 
-if (process.env.NODE_ENV === 'production') Raven.config(AppSettings.ravenDSN, {
+if (process.env.DEPLOY_ENV === 'deploy') Raven.config(AppSettings.ravenDSN, {
   release: process.env.COMMITHASH,
   maxBreadcrumbs: 50,
   dataCallback: data => ({

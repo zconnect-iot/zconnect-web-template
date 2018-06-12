@@ -1,0 +1,22 @@
+@import '~theme/variables.scss';
+
+.EditUser {
+  :global(.Content__headerCenter) :global(.Button--success) {
+    color: $text-color;
+    border: 1px solid $brand-grey;
+
+    :global(.Icon) {
+      fill: $brand-success;
+    }
+  }
+
+  .Details, .Organisation {
+    margin-bottom: $padding * 2;
+
+    :global(.TextField), :global(.EmailField), :global(.PasswordField), :global(.SelectField) {
+      padding: 10px 0 10px 0;
+      border-bottom: none;
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+@import '~theme/variables.scss';
+
+.StatCards {
+  margin-top: 20px;
+
+  :global(.StatCard) {
+    margin: $padding;
+  }
+}
