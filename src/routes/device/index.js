@@ -40,12 +40,12 @@ class Device extends React.Component {
     // TODO: Clarify modes that will be available in demo
     const modes = [
       {
-        title: 'Internal/External Activations',
-        keys: ['internal_activation', 'external_activation'],
+        title: 'System Temperatures',
+        keys: ['hot_coolant_temp', 'cold_coolant_temp', 'box_temp'],
       },
       {
-        title: 'Device Open Time',
-        keys: ['device_open_time'],
+        title: 'Current',
+        keys: ['current_in'],
       },
     ]
 
