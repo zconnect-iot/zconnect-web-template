@@ -1,7 +1,7 @@
 {
-  "name": "mwc-front",
+  "name": "zconnect-web-template",
   "version": "1.0.0",
-  "description": "MWC Front-end",
+  "description": "Zconnect Example Front-end",
   "main": "index.js",
   "scripts": {
     "test": "jest src/",
