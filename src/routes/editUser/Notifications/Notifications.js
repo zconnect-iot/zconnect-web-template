@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import { NotificationSettings } from 'zc-web/containers'
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 
 import styles from './style.scss'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { TextField, PasswordField, EmailField } from 'zc-web/widgets/forms'
+import { TextField, PasswordField, EmailField } from 'zc-web/components/forms'
 
 import { isEmail, required, minLength, passwordsMatch, isPhoneNumber } from 'utils'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 import { Content } from 'zc-web/components'
 
 import AddDeviceForm from './AddDeviceForm'

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Sentry from 'raven-js'
 
 import { logout } from 'zc-core/auth/actions'
-import { Modal } from 'zc-web/views'
+import { Modal } from 'zc-web/components'
 import { SimpleLink, Codeblock } from 'zc-web/components'
 
 

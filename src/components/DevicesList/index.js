@@ -2,8 +2,8 @@ import React from 'react'
 import { mapProps } from 'recompose'
 import { ColumnDefinition } from 'griddle-react'
 
-import { Link } from 'zc-web/widgets'
-import { List } from 'zc-web/views'
+import { Link } from 'zc-web/components'
+import { List } from 'zc-web/components'
 
 import { OnlineStatus } from 'components'
 

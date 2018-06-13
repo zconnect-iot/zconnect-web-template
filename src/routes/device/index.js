@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { Content, TimeSeriesGraphPanel, DateRangeModal } from 'zc-web/components'
-import { ActivityStream } from 'zc-web/containers'
+import { Content, DateRangeModal } from 'zc-web/components'
+import { ActivityStream, TimeSeriesGraphPanel } from 'zc-web/containers'
 import { apiRequest } from 'zc-core/api/actions'
 import { zcApiShapeJS } from 'zc-core/utils/propTypes'
 

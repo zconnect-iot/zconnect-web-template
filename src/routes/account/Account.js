@@ -4,7 +4,7 @@ import { Row, Col } from 'react-flexbox-grid'
 import classnames from 'classnames'
 
 import { Content, Link } from 'zc-web/components'
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 import { NotificationSettings } from 'zc-web/containers'
 
 import Details from './Details'
