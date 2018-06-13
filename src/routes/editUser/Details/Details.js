@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 import { zcApiShapeJS } from 'zc-core/utils/propTypes'
 import { Spinner } from 'zc-web/components'
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 
 import { UserForm } from 'components'
 

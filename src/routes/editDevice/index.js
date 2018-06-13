@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
 
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 import { Content, Spinner } from 'zc-web/components'
 import { apiRequest } from 'zc-core/api/actions'
 import { selectAPIState } from 'zc-core/api/selectors'

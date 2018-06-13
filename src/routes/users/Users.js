@@ -5,7 +5,7 @@ import { noop } from 'lodash'
 
 import { Content } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
-import { Link } from 'zc-web/widgets'
+import { Link } from 'zc-web/components'
 
 import styles from './style.scss'
 

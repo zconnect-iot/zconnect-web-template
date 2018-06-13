@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import {
   TextField,
-} from 'zc-web/widgets/forms/index'
+} from 'zc-web/components/forms/index'
 
 
 export default function DeviceForm({ handleSubmit }) {

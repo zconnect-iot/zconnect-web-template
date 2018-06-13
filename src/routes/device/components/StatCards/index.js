@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'react-flexbox-grid'
 
-import { StatCard } from 'zc-web/widgets'
+import { StatCard } from 'zc-web/components'
 
 import styles from './style.scss'
 

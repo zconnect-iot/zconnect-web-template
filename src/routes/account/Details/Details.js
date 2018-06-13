@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { noop } from 'lodash'
 
 import { Spinner } from 'zc-web/components'
-import { Card } from 'zc-web/views'
+import { Card } from 'zc-web/components'
 import { zcApiShapeJS } from 'zc-core/utils/propTypes'
 
 import { UserForm } from 'components'

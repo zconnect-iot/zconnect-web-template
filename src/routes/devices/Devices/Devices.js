@@ -6,7 +6,7 @@ import { noop } from 'lodash'
 
 import { Content } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
-import { Link, ProgressBar } from 'zc-web/widgets'
+import { Link, ProgressBar } from 'zc-web/components'
 
 
 const LinkColumn = mapProps(({ value }) => ({
