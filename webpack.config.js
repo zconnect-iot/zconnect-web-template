@@ -34,6 +34,7 @@ const config = {
         test: /\.js$/,
         include: [
           path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "styleguide"),
           path.resolve(__dirname, "node_modules/zc-core"),
           path.resolve(__dirname, "node_modules/zc-web")
         ],

@@ -4,7 +4,7 @@ import { ColumnDefinition, RowDefinition } from 'griddle-react'
 import { mapProps, withProps } from 'recompose'
 import { noop } from 'lodash'
 
-import { Content } from 'zc-web/components'
+import { Content, GoogleMap } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
 import { Link, ProgressBar } from 'zc-web/components'
 
