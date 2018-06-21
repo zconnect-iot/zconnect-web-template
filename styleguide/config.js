@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  require: [path.resolve(__dirname, './setup.js')],
   styleguideComponents: {
     Wrapper: path.join(__dirname, './Wrapper'),
   },
@@ -46,6 +47,8 @@ module.exports = {
         '**/components/Content/**',
         '**/containers/AsyncList/AsyncList.js',
         '**/containers/NotificationSettings/NotificationSettings.js',
+        '**/containers/auth/Login/Login.js',
+        '**/containers/auth/Login/LoginForm.js',
       ],
     },
   ],

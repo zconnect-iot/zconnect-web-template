@@ -4,7 +4,7 @@ import data from '../devServer/db.json'
 import tsData from './tsdata.json'
 
 // Store with minimal data for rendering connected components in stylguide
-export default fromJS({
+const state = fromJS({
   auth: {
     userId: 'USER_ID',
   },
@@ -111,3 +111,11 @@ export default fromJS({
     code: 'en',
   },
 })
+
+export default state.setIn(['api', fromJS({ endpoint: 'login', params: {} })], fromJS({
+  state: {
+    pending: false,
+    error: false,
+    success: false,
+  },
+}))
