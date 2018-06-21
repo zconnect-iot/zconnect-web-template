@@ -19,8 +19,7 @@ import styles from './style.scss'
 function App({ navigate, location, navItems }) {
   return (
     <Page
-      activeRoute={location.pathname}
-      location={location}
+      location={location.pathname}
       navigate={navigate}
       navItems={navItems}
       className={styles.App}

@@ -4,9 +4,8 @@ import { ColumnDefinition, RowDefinition } from 'griddle-react'
 import { mapProps, withProps } from 'recompose'
 import { noop } from 'lodash'
 
-import { Content, GoogleMap } from 'zc-web/components'
+import { Content, Link, ProgressChart } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
-import { Link, ProgressBar } from 'zc-web/components'
 
 
 const LinkColumn = mapProps(({ value }) => ({
@@ -17,7 +16,7 @@ const LinkColumn = mapProps(({ value }) => ({
 const TimeOpenColumn = withProps({
   maximum: 900,
   units: ' seconds',
-})(ProgressBar)
+})(ProgressChart)
 
 export default class Devices extends React.Component {
   getAsyncListRef = ref => (this.list = ref)
@@ -48,10 +47,6 @@ export default class Devices extends React.Component {
             <ColumnDefinition
               id="name"
               title="Name"
-            />
-            <ColumnDefinition
-              id="space.name"
-              title="Space"
             />
             <ColumnDefinition
               id="product.name"

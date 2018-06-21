@@ -1,33 +1,21 @@
-import configureStore from 'redux-mock-store'
-import { fromJS, Map } from 'immutable'
+import { createStore, applyMiddleware } from 'redux'
+import { combineReducers } from 'redux-immutable'
+import { reducer as form } from 'redux-form/immutable'
+import { createLogger } from 'redux-logger'
 
-import tsData from './tsdata.json'
+import mockState from './mockState'
 
-// Store with minimal data for rendering connected components in stylguide
-const mockState = fromJS({
-  auth: {
-    userId: 'USER_ID',
-  },
-  api: {
-    tsData: {
-      state: {
-        success: true,
-      },
-      response: {
-        DEVICE_ID: Map([ // Required so that resolution key is not cast to string
-          [3600, fromJS(tsData)],
-        ]),
-      },
-    },
-  },
-  form: {
-    subscriptions: {
-
-    },
-  },
-  locale: {
-    code: 'en',
-  },
+const logger = createLogger({
+  stateTransformer: state => state.toJS()
 })
 
-export default configureStore()(mockState)
+export default createStore(
+  combineReducers({
+    form,
+    auth: state => state,
+    locale: state => state,
+    api: state => state,
+  }),
+  mockState,
+  applyMiddleware(logger)
+)

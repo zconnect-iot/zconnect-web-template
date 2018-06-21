@@ -36,7 +36,7 @@
   "subscriptions": [
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "business metrics",
       "min_severity": 0,
@@ -45,7 +45,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "maintenance",
       "min_severity": 20,
@@ -54,7 +54,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "system",
       "min_severity": 30,
@@ -63,7 +63,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "system",
       "min_severity": 30,
@@ -72,7 +72,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "system",
       "min_severity": 30,
@@ -81,7 +81,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "maintenance",
       "min_severity": 20,
@@ -90,7 +90,7 @@
     },
     {
       "organization": {
-        "id": 2
+        "id": "2"
       },
       "category": "business metrics",
       "min_severity": 0,

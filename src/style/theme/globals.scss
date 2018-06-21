@@ -83,8 +83,7 @@ h6 {
   &:global(success) { background-color: $brand-success; }
   &:global(warning) { background-color: $brand-warning; }
   &:global(danger) { background-color: $brand-danger; }
-  &:global(info) { background-color: $brand-grey; }
-  &:global(grey) { background-color: $brand-grey; }
+  &:global(info) { background-color: $brand-info; }
 
   &:global(light) { background-color: $bg-light; }
   &:global(dark) { background-color: $bg-dark; }
@@ -96,8 +95,7 @@ h6 {
   &:global(success) { color: $brand-success; fill: $brand-success; }
   &:global(warning) { color: $brand-warning; fill: $brand-warning; }
   &:global(danger) { color: $brand-danger; fill: $brand-danger; }
-  &:global(info) { color: $brand-grey; fill: $brand-grey; }
-  &:global(grey) { color: $brand-grey; fill: $brand-grey; }
+  &:global(info) { color: $brand-info; fill: $brand-info; }
 
   &:global(minor) { color: $text-color-minor; fill: $text-color-minor; }
   &:global(light) { color: $text-color-light; fill: $text-color-light; }
@@ -182,7 +180,7 @@ h6 {
   select, button {
     height: 30px;
     background: white;
-    border: 1px solid $brand-grey;
+    border: 1px solid $brand-info;
     border-radius: $border-radius;
     background: white;
     color: $text-color;

@@ -3,7 +3,7 @@
 .EditUser {
   :global(.Content__headerCenter) :global(.Button--success) {
     color: $text-color;
-    border: 1px solid $brand-grey;
+    border: 1px solid $brand-info;
 
     :global(.Icon) {
       fill: $brand-success;

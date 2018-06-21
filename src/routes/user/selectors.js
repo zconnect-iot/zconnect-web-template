@@ -78,10 +78,10 @@ export const selectNotificationCategories = createSelector(
 
 export const selectNotificationTypes = createSelector(
   selectUser,
-  user => user.get('notificationCategories', [['SMS', 'sms'], ['E-mail', 'email']]),
+  user => user.get('notificationTypes', [['SMS', 'sms'], ['E-mail', 'email']]),
 )
 
 export const selectNotificationSeverities = createSelector(
   selectUser,
-  user => user.get('notificationCategories', [['Important', 30], ['Some', 20], ['All', 0]]),
+  user => user.get('notificationSeverities', [['Important', 30], ['Some', 20], ['All', 0]]),
 )
