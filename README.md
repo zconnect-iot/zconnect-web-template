@@ -2,9 +2,15 @@
 
 ## Development
 
-`npm start`
+`git clone`
 
-`npm run server`
+`git submodule update --init`
+
+`npm i`
+
+`npm start` - Webpack dev server
+
+`npm run server` - Mock api if needed
 
 devServer runs on `localhost:3000`
 
