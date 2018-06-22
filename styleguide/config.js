@@ -9,6 +9,25 @@ module.exports = {
   ignore: ['**/selectors.js', '**/endpoints.js', '**/*.test.js', '**/utils.js'],
   sections: [
     {
+      name: 'Containers',
+      description: 'Store connected components that interact with the store and/or zconnect api via zconnect-js',
+      sections: [
+        {
+          name: 'ZC Auth',
+          description: 'Auth container components that interface with zconnect api via zc-core',
+          components: '../src/modules/zconnect-web/containers/auth/**/index.js',
+        },
+        {
+          name: 'ZC API',
+          description: 'Container components that interact with the zconnect api via zc-core',
+          components: '../src/modules/zconnect-web/containers/**/index.js',
+          ignore: [
+            '**/containers/auth/**',
+          ],
+        }
+      ]
+    },
+    {
       name: 'Components',
       description: 'Dumb/Presentational components that only depend on props and/or internal state',
       sections: [
@@ -37,25 +56,6 @@ module.exports = {
           ],
         },
       ],
-    },
-    {
-      name: 'Containers',
-      description: 'Store connected components that interact with the store and/or zconnect api via zconnect-js',
-      sections: [
-        {
-          name: 'ZC Auth',
-          description: 'Auth container components that interface with zconnect api via zc-core',
-          components: '../src/modules/zconnect-web/containers/auth/**/index.js',
-        },
-        {
-          name: 'ZC API',
-          description: 'Container components that interact with the zconnect api via zc-core',
-          components: '../src/modules/zconnect-web/containers/**/index.js',
-          ignore: [
-            '**/containers/auth/**',
-          ],
-        }
-      ]
     },
   ],
 }
