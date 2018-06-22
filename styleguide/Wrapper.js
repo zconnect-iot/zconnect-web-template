@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 
+import { Translator } from 'zc-core/locale/components'
+
 import store from './store'
 
 /*
@@ -35,7 +37,9 @@ export default class Wrapper extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        {this.props.children}
+        <Translator>
+          {this.props.children}
+        </Translator>
       </Provider>
     )
   }

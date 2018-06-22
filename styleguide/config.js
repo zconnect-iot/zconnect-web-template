@@ -41,15 +41,21 @@ module.exports = {
     {
       name: 'Containers',
       description: 'Store connected components that interact with the store and/or zconnect api via zconnect-js',
-      components: '../src/modules/zconnect-web/containers/**/*.js',
-      ignore: [
-        '**/containers/ActivityStream/components/**',
-        '**/components/Content/**',
-        '**/containers/AsyncList/AsyncList.js',
-        '**/containers/NotificationSettings/NotificationSettings.js',
-        '**/containers/auth/Login/Login.js',
-        '**/containers/auth/Login/LoginForm.js',
-      ],
+      sections: [
+        {
+          name: 'ZC Auth',
+          description: 'Auth container components that interface with zconnect api via zc-core',
+          components: '../src/modules/zconnect-web/containers/auth/**/index.js',
+        },
+        {
+          name: 'ZC API',
+          description: 'Container components that interact with the zconnect api via zc-core',
+          components: '../src/modules/zconnect-web/containers/**/index.js',
+          ignore: [
+            '**/containers/auth/**',
+          ],
+        }
+      ]
     },
   ],
 }

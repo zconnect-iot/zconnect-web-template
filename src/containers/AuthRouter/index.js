@@ -7,7 +7,10 @@ import { mapProps } from 'recompose'
 import qs from 'query-string'
 
 import { selectUserLoggedIn } from 'zc-core/auth/selectors'
-import { Forgotten, Login, PasswordConfirm } from 'zc-web/containers/auth'
+import { Forgotten, Login, PasswordConfirm, Register } from 'zc-web/containers/auth'
+
+import styles from './style.scss'
+
 
 const LoginWithProps = mapProps(
   ({ history, location }) => ({
@@ -41,7 +44,7 @@ function AuthRouter({ authenticated }) {
     <Redirect to="/" />
   )
   return (
-    <div>
+    <div className={styles.AuthRouter}>
       <Route path="/login" component={LoginWithProps} />
       <Route path="/forgotten" component={ForgottenWithProps} />
       <Route path="/reset" component={PasswordConfirmWithProps} />
