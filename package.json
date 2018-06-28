@@ -19,8 +19,12 @@
     "ie > 9"
   ],
   "keywords": [],
-  "author": "Zoetrope",
-  "license": "ISC",
+  "author": "Zoetrope Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zconnect-iot/zconnect-web-template.git"
+  },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",

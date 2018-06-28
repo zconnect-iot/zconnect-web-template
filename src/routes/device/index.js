@@ -41,11 +41,11 @@ class Device extends React.Component {
     const modes = [
       {
         title: 'System Temperatures',
-        keys: ['door_open_time'],
+        keys: ['hot_coolant_temp', 'cold_coolant_temp', 'box_temp'],
       },
       {
         title: 'Current',
-        keys: ['door_open_count'],
+        keys: ['current_in'],
       },
     ]
 
