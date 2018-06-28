@@ -41,11 +41,11 @@ class Device extends React.Component {
     const modes = [
       {
         title: 'System Temperatures',
-        keys: ['hot_coolant_temp', 'cold_coolant_temp', 'box_temp'],
+        keys: ['door_open_time'],
       },
       {
         title: 'Current',
-        keys: ['current_in'],
+        keys: ['door_open_count'],
       },
     ]
 
@@ -68,6 +68,8 @@ class Device extends React.Component {
           startTime={start}
           endTime={end}
         />
+        <h3>Activity</h3>
+        <br />
         <ActivityStream deviceId={deviceId} start={start} end={end} />
       </Content>
     )

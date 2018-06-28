@@ -1,5 +1,13 @@
 # ZConnect Demo Front End
 
+A minimal ZConnect front end demonstrating usage of [ZConnect Web](https://github.com/zconnect-iot/zconnect-web) and [ZConnect JS](https://github.com/zconnect-iot/zconnect-js).
+
+Configured to work with [ZConnect Demo Backend](https://github.com/zconnect-iot/zconnect-django-demo).
+
+Check out the [ZConnect Homepage](https://zconnect-iot.github.io/) for more info
+
+![Screen Grab](https://media.giphy.com/media/jxjruGEZFdNzthuJjw/giphy.gif)
+
 ## Development
 
 `git clone`
