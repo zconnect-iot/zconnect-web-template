@@ -6,8 +6,6 @@ import { Row, Col } from 'react-flexbox-grid'
 import { zcApiShapeJS } from 'zc-core/utils/propTypes'
 import { Content } from 'zc-web/components'
 
-import { oneOfOrgLevels, emptyString } from 'utils/propTypes'
-
 import { ContentSpinner } from 'components'
 
 import Details from './Details'
@@ -15,9 +13,19 @@ import Notifications from './Notifications'
 import styles from './style.scss'
 
 
-class EditUser extends React.Component {
+class EditUser extends React.PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      submitted: false,
+    }
+  }
   componentDidMount() {
     this.props.fetchUser()
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.dirty && (!this.props.dirty && this.state.submitted)) this.setState({ submitted: false })
   }
 
   componentWillUnmount() {
@@ -43,6 +51,7 @@ class EditUser extends React.Component {
       color: !notificationsChanged && !detailsChanged ? 'grey' : 'success',
       disabled: api.pending || (!notificationsChanged && !detailsChanged),
       action: () => {
+        this.setState({ submitted: true })
         if (notificationsChanged) this.notifications.submitForm()
         if (detailsChanged) this.props.submitForm()
       },
@@ -52,7 +61,7 @@ class EditUser extends React.Component {
       <Content title="Edit User" className={styles.EditUser} actionItems={actions}>
         <Row>
           <Col xs={12} sm={6}>
-            <Details />
+            <Details submitted={this.state.submitted} />
           </Col>
           <Col xs={12} sm={6}>
             <Notifications

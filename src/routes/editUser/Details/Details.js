@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import { zcApiShapeJS } from 'zc-core/utils/propTypes'
-import { Spinner } from 'zc-web/components'
-import { Card } from 'zc-web/components'
+import { Spinner, Card } from 'zc-web/components'
 
 import { UserForm } from 'components'
 
@@ -13,7 +12,7 @@ import styles from '../style.scss'
 
 
 export default function Details(props) {
-  const { api, errorMessage } = props
+  const { api, errorMessage, submitted } = props
   return (
     <Card
       className={classnames(styles.Details, styles.padBody)}
@@ -25,7 +24,7 @@ export default function Details(props) {
         <h4 className="text-danger margin-top">{errorMessage}</h4>
       }
       {api.pending && <Spinner />}
-      {api.success &&
+      {api.success && submitted &&
         <h4 className="text-success margin-top">User details updated</h4>
       }
     </Card>
@@ -34,6 +33,6 @@ export default function Details(props) {
 
 Details.propTypes = {
   api: zcApiShapeJS.isRequired,
-  editApi: zcApiShapeJS.isRequired,
+  submitted: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
 }
