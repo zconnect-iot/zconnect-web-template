@@ -1,22 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ColumnDefinition, RowDefinition } from 'griddle-react'
-import { mapProps, withProps } from 'recompose'
+import { mapProps } from 'recompose'
 import { noop } from 'lodash'
 
 import { Content, Link, ProgressChart } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
 
+const getColourForTemp = (temp) => {
+  if (temp < 6) return 'primary'
+  if (temp < 20) return 'success'
+  return 'danger'
+}
 
 const LinkColumn = mapProps(({ value }) => ({
   children: value,
   route: `/devices/${value}`,
 }))(Link)
 
-const TimeOpenColumn = withProps({
-  maximum: 900,
-  units: ' seconds',
-})(ProgressChart)
+const TemperatureColumn = mapProps(props => ({
+  maximum: 100,
+  units: '°C',
+  foregroundColor: getColourForTemp(props.value),
+  ...props,
+}))(ProgressChart)
 
 export default class Devices extends React.Component {
   getAsyncListRef = ref => (this.list = ref)
@@ -53,17 +60,19 @@ export default class Devices extends React.Component {
               title="Product"
             />
             <ColumnDefinition
-              id="sensors_current.device_open_count.value"
-              title="Opened"
+              id="sensors_current.process_hot_coolant_temp.value"
+              title="Hot Coolant"
+              customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.panic.value"
-              title="Emergency closed"
+              id="sensors_current.process_cold_coolant_temp.value"
+              title="Cold coolant"
+              customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.device_open_time.value"
-              title="Time Open"
-              customComponent={TimeOpenColumn}
+              id="sensors_current.process_hot_box_temp.value"
+              title="Box"
+              customComponent={TemperatureColumn}
             />
           </RowDefinition>
         </AsyncListWithState>

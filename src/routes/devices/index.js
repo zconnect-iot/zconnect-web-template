@@ -10,7 +10,6 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/devices" exact component={Devices} />
-      <Route path="/devices/:deviceId/settings" exact component={Device} />
       <Route path="/devices/:deviceId/edit" exact component={EditDevice} />
       <Route path="/devices/:deviceId" component={Device} />
     </Switch>
