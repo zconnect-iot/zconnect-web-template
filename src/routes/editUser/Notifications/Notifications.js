@@ -27,7 +27,7 @@ export default function Notifications(props) {
         hideSave
       /> : <span>
         The user needs to be assigned to an organisation before setting
-        notification settings. You can do this in the Organisation panel on this page
+        notification settings.
       </span>}
     </Card>
   )
