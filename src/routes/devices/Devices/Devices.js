@@ -13,9 +13,10 @@ const LinkColumn = mapProps(({ value }) => ({
   route: `/devices/${value}`,
 }))(Link)
 
-const TimeOpenColumn = withProps({
-  maximum: 900,
-  units: ' seconds',
+const TemperatureColumn = withProps({
+  maximum: 100,
+  units: '°C',
+  foregroundColor: 'danger',
 })(ProgressChart)
 
 export default class Devices extends React.Component {
@@ -53,17 +54,19 @@ export default class Devices extends React.Component {
               title="Product"
             />
             <ColumnDefinition
-              id="sensors_current.device_open_count.value"
-              title="Opened"
+              id="sensors_current.hot_coolant_temp.value"
+              title="Hot Coolant"
+              customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.panic.value"
-              title="Emergency closed"
+              id="sensors_current.cold_coolant_temp.value"
+              title="Cold coolant"
+              customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.device_open_time.value"
-              title="Time Open"
-              customComponent={TimeOpenColumn}
+              id="sensors_current.box_temp.value"
+              title="Box"
+              customComponent={TemperatureColumn}
             />
           </RowDefinition>
         </AsyncListWithState>
