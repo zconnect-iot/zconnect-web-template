@@ -60,17 +60,17 @@ export default class Devices extends React.Component {
               title="Product"
             />
             <ColumnDefinition
-              id="sensors_current.hot_coolant_temp.value"
+              id="sensors_current.process_hot_coolant_temp.value"
               title="Hot Coolant"
               customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.cold_coolant_temp.value"
+              id="sensors_current.process_cold_coolant_temp.value"
               title="Cold coolant"
               customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.box_temp.value"
+              id="sensors_current.process_hot_box_temp.value"
               title="Box"
               customComponent={TemperatureColumn}
             />
