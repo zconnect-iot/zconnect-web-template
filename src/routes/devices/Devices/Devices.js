@@ -1,23 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ColumnDefinition, RowDefinition } from 'griddle-react'
-import { mapProps, withProps } from 'recompose'
+import { mapProps } from 'recompose'
 import { noop } from 'lodash'
 
 import { Content, Link, ProgressChart } from 'zc-web/components'
 import { AsyncListWithState } from 'zc-web/containers'
 
+const getColourForTemp = (temp) => {
+  if (temp < 6) return 'primary'
+  if (temp < 20) return 'success'
+  return 'danger'
+}
 
 const LinkColumn = mapProps(({ value }) => ({
   children: value,
   route: `/devices/${value}`,
 }))(Link)
 
-const TemperatureColumn = withProps({
+const TemperatureColumn = mapProps(props => ({
   maximum: 100,
   units: '°C',
-  foregroundColor: 'danger',
-})(ProgressChart)
+  foregroundColor: getColourForTemp(props.value),
+  ...props,
+}))(ProgressChart)
 
 export default class Devices extends React.Component {
   getAsyncListRef = ref => (this.list = ref)
