@@ -4,14 +4,10 @@
 */
 
 import { createSelector } from 'reselect'
-import { Map } from 'immutable'
 
-import { mergeApiStates } from 'zc-core/utils'
+import { mergeApiStates, emptyMap } from 'zc-core/utils'
 import { selectAPIState } from 'zc-core/api/selectors'
 import { selectJWT } from 'zc-core/auth/selectors'
-
-import { emptyList, orgLevelMap, getOrgFromOrgs } from 'utils'
-import { roles } from 'utils/propTypes'
 
 import Config from '../config/AppSettings'
 
@@ -28,8 +24,11 @@ export const selectRole = createSelector(
   isAdmin => (isAdmin ? 'admin' : 'user'),
 )
 
-// TODO: Get this from somewhere. Used by /account and passed to NotificationSettings
-export const selectOrganisationId = () => 1
+// Take first and only org in list. Used by /account and passed to NotificationSettings
+export const selectOrganisationId = createSelector(
+  selectJWT,
+  jwt => jwt.get('orgs').get(0, emptyMap).get('id', ''),
+)
 
 // Concats the list of routes for the role with the defaults as described in Config
 export const selectRoutesForRole = createSelector(

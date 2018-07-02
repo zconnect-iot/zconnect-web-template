@@ -66,8 +66,11 @@ export const selectUserPhoneNumber = createSelector(
   user => user.get('phone_number', ''),
 )
 
-// TODO: Get from server
-export const selectOrganisationId = () => 1
+// Takes the first and only org in list
+export const selectOrganisationId = createSelector(
+  selectUser,
+  user => user.get('orgs').get(0, emptyMap).get('id', ''),
+)
 
 // Notification config
 // TODO: Remove defaults when data returned on User
