@@ -1,13 +1,15 @@
 FROM node:10
- 
+
 # Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
- 
+WORKDIR /www
+
 # Install app dependencies
-COPY . /usr/src/app/
-RUN npm install -g npm
-RUN npm rebuild node-sass
+# RUN npm install -g npm
+# RUN npm rebuild node-sass
+
+COPY package.json package-lock.json ./
+COPY src/modules ./src/modules
 RUN npm install
- 
+
+COPY . /www
 CMD [ "npm", "start" ]

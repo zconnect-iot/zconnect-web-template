@@ -1,3 +1,3 @@
 export default {
-  baseURL: 'https://rtrzc2.olapi.io',
+  baseURL: `${window.location.protocol}//${window.location.hostname}:8981`,
 }

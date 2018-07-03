@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest src/",
     "lint": "eslint src/",
-    "start": "NODE_PATH=$PWD webpack-dev-server --open",
+    "start": "NODE_PATH=$PWD webpack-dev-server --open --host 0.0.0.0",
     "build": "NODE_PATH=$PWD webpack -p",
     "start:build": "npm run build && NODE_ENV=production npm run start",
     "server": "node devServer/server.js",
