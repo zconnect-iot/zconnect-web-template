@@ -22,8 +22,8 @@ const TemperatureColumn = mapProps(({ value, ...props }) => ({
   ...props,
   maximum: 100,
   units: '°C',
-  foregroundColor: getColourForTemp(props.value),
-  value: value.toFixed ? value.toFixed(2) : value,
+  foregroundColor: getColourForTemp(value),
+  value: value && value.toFixed ? value.toFixed(1) : value,
 }))(ProgressChart)
 
 export default class Devices extends React.Component {
