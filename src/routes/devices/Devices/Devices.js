@@ -18,11 +18,12 @@ const LinkColumn = mapProps(({ value }) => ({
   route: `/devices/${value}`,
 }))(Link)
 
-const TemperatureColumn = mapProps(props => ({
+const TemperatureColumn = mapProps(({ value, ...props }) => ({
+  ...props,
   maximum: 100,
   units: '°C',
   foregroundColor: getColourForTemp(props.value),
-  ...props,
+  value: value.toFixed ? value.toFixed(2) : value,
 }))(ProgressChart)
 
 export default class Devices extends React.Component {
