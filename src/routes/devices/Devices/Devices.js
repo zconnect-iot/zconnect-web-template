@@ -71,7 +71,7 @@ export default class Devices extends React.Component {
               customComponent={TemperatureColumn}
             />
             <ColumnDefinition
-              id="sensors_current.process_hot_box_temp.value"
+              id="sensors_current.process_box_temp.value"
               title="Box"
               customComponent={TemperatureColumn}
             />

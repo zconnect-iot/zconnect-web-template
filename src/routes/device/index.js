@@ -41,7 +41,7 @@ class Device extends React.Component {
     const modes = [
       {
         title: 'System Temperatures',
-        keys: ['process_hot_coolant_temp', 'process_cold_coolant_temp', 'process_hot_box_temp'],
+        keys: ['process_hot_coolant_temp', 'process_cold_coolant_temp', 'process_box_temp'],
       },
       {
         title: 'Current',
