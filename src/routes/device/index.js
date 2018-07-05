@@ -40,12 +40,12 @@ class Device extends React.Component {
     // TODO: Clarify modes that will be available in demo
     const modes = [
       {
-        title: 'System Temperatures',
-        keys: ['process_hot_coolant_temp', 'process_cold_coolant_temp', 'process_box_temp'],
+        title: 'Fridge',
+        keys: ['process_cold_coolant_temp', 'process_box_temp'],
       },
       {
-        title: 'Current',
-        keys: ['current_in'],
+        title: 'Hot Coolant',
+        keys: ['process_hot_coolant_temp'],
       },
     ]
 
@@ -63,6 +63,7 @@ class Device extends React.Component {
           closeModal={this.hideModal}
         />
         <TimeSeriesGraphPanel
+          title="Temperatures"
           deviceId={deviceId}
           modes={modes}
           startTime={start}

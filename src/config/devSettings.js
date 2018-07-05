@@ -1,3 +1,3 @@
 export default {
-  baseURL: `${window.location.protocol}//${window.location.hostname}:8981`,
+  baseURL: `http://192.168.1.108:8981`,
 }
